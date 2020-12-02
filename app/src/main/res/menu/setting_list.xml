@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/setting_person"
+        android:title="@string/Setting_Person_c" />
+    <item
+        android:id="@+id/setting_friend"
+        android:title="@string/Setting_Friend_c" />
+    <item
+        android:id="@+id/setting_private"
+        android:title="@string/Setting_Private_c" />
+    <item
+        android:id="@+id/setting_notification"
+        android:title="@string/Setting_Notification_c" />
+</menu>

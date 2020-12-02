@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.test.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/GoalFragment"
+        android:name="com.example.test.ui.goal.GoalFragment"
+        android:label="fragment_goal"
+        tools:layout="@layout/fragment_goal" />
+    <fragment
+        android:id="@+id/ActFragment"
+        android:name="com.example.test.ui.act.ActFragment"
+        android:label="fragment_act"
+        tools:layout="@layout/fragment_act" />
+    <fragment
+        android:id="@+id/UserFragment"
+        android:name="com.example.test.ui.user.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/SettingFragment"
+        android:name="com.example.test.ui.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/SortFragment"
+        android:name="com.example.test.ui.sort.SortFragment"
+        android:label="fragment_sort"
+        tools:layout="@layout/fragment_sort" />
+    <fragment
+        android:id="@+id/ActItemFragment"
+        android:name="com.example.test.ActItemFragment"
+        android:label="fragment_act_item"
+        tools:layout="@layout/fragment_act_item" />
+</navigation>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".ActItemFragment">
+
+    <ImageView
+        android:id="@+id/act_item_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_height"
+        android:contentDescription="@string/Main_Act_c"
+        app:srcCompat="@drawable/banner_image1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_alpha">
+
+        <TextView
+            android:id="@+id/act_item_title"
+            style="@style/Act_Item_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Act_Item_Title_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/act_item_time_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/Act_Item_Time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/act_item_title"
+            app:srcCompat="@drawable/ic_time" />
+
+        <TextView
+            android:id="@+id/act_item_time"
+            style="@style/Act_Item_Context"
+            android:layout_width="@dimen/width_act_item_context"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Act_Item_Time_1"
+            app:layout_constraintStart_toEndOf="@id/act_item_time_image"
+            app:layout_constraintTop_toBottomOf="@+id/act_item_title" />
+
+        <TextView
+            android:id="@+id/act_item_location_title"
+            style="@style/Act_Item_Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Act_Item_Location_c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/act_item_time" />
+
+        <TextView
+            android:id="@+id/act_item_location"
+            style="@style/Act_Item_Context"
+            android:layout_width="@dimen/width_act_item_context"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Act_Item_Location_1"
+            app:layout_constraintStart_toEndOf="@+id/act_item_location_title"
+            app:layout_constraintTop_toBottomOf="@+id/act_item_time" />
+
+        <TextView
+            android:id="@+id/act_item_cost_title"
+            style="@style/Act_Item_Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Act_Item_Cost_c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_item_location" />
+
+        <TextView
+            android:id="@+id/act_item_cost"
+            style="@style/Act_Item_Context"
+            android:layout_width="@dimen/width_act_item_context"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Act_Item_Cost_1"
+            app:layout_constraintStart_toEndOf="@+id/act_item_cost_title"
+            app:layout_constraintTop_toBottomOf="@+id/act_item_location" />
+
+        <TextView
+            android:id="@+id/act_item_count_title"
+            style="@style/Act_Item_Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Act_Item_Count_c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_item_cost" />
+
+        <TextView
+            android:id="@+id/act_item_count"
+            style="@style/Act_Item_Context"
+            android:layout_width="@dimen/width_act_item_context"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Act_Item_Count_1"
+            app:layout_constraintStart_toEndOf="@+id/act_item_count_title"
+            app:layout_constraintTop_toBottomOf="@+id/act_item_cost" />
+
+        <Button
+            android:id="@+id/act_join_button"
+            style="@style/Orange_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/Act_join_c"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_item_count" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/drawer_sort"
+        android:title="@string/Main_Nav_Sort_c" />
+    <item android:id="@+id/drawer_setting"
+        android:title="@string/Main_Setting_c"/>
+    <item android:id="@+id/drawer_logout"
+        android:title="@string/Main_Logout_c"/>
+</menu>

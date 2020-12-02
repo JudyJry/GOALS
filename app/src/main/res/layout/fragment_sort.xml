@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".ui.setting.SortFragment">
+    <TextView
+        android:id="@+id/sort_nav_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_sort_list"
+        android:layout_marginTop="@dimen/margin_sort_list"
+        android:layout_marginEnd="@dimen/margin_sort_list"
+        android:background="@drawable/ic_sort_interested_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/size_icon"
+        android:paddingEnd="0dp"
+        android:text="@string/Sort_c"
+        android:textColor="@color/deep_purple"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sort_nav_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sort_list"
+        android:layout_marginEnd="@dimen/margin_sort_list"
+        android:background="@color/white"
+        app:itemBackground="@drawable/sort_item_bg"
+        app:itemTextColor="@color/deep_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sort_nav_header"
+        app:menu="@menu/sort_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

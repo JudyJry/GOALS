@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChildActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/child_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_bar"
+        android:background="@color/deep_cyan"
+        android:elevation="@dimen/elevation_bar"
+        app:contentInsetEnd="@dimen/size_icon"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/child_toolbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            android:contentDescription="@string/icon_list" />
+
+        <TextView
+            android:id="@+id/child_toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/Main_Setting_c"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_text_20sp"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="17dp" />
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/child_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/height_bar"
+        android:layout_marginBottom="0dp"
+        android:elevation="@dimen/elevation_page"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/Sort_Ball_c"
+        android:id="@+id/sort_ball"/>
+    <item android:title="@string/Sort_Aerobic_c"
+        android:id="@+id/sort_aerobic"/>
+    <item android:title="@string/Sort_Outdoor_c"
+        android:id="@+id/sort_outdoor"/>
+    <item android:title="@string/Sort_Indoor_c"
+        android:id="@+id/sort_indoor"/>
+    <item android:title="@string/Sort_Water_c"
+        android:id="@+id/sort_water"/>
+</menu>

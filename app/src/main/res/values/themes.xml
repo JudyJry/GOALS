@@ -1,0 +1,24 @@
+<resources>
+    <style name="Theme.Test" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/bright_orange</item>
+        <item name="colorPrimaryDark">@color/deep_cyan</item>
+        <item name="colorAccent">@color/deep_cyan</item>
+        <item name="navigationViewStyle">@style/AppNavigationViewStyle</item>
+    </style>
+
+    <style name="Theme.Test.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Test.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Test.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppNavigationViewStyle" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">@style/AppNavigationViewItemTextAppearance</item>
+    </style>
+    <style name="AppNavigationViewItemTextAppearance" parent="@style/TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

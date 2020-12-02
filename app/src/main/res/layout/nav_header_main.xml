@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_cyan"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/nav_toolbar_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_list"
+        android:contentDescription="@string/icon_list"
+        />
+
+    <View
+        android:id="@+id/toolbar_div"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_cyan" />
+
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="banner_margin">10dp</dimen>
+    <dimen name="design_navigation_separator_vertical_padding">0dp</dimen>
+    <dimen name="height_bar">60dp</dimen>
+    <dimen name="size_icon">60dp</dimen>
+    <dimen name="size_text_20sp">20sp</dimen>
+    <dimen name="margin_sort_list">20dp</dimen>
+    <dimen name="elevation_bar">5dp</dimen>
+    <dimen name="elevation_page">0dp</dimen>
+    <dimen name="banner_height">207dp</dimen>
+    <dimen name="width_act_item_context">280dp</dimen>
+</resources>

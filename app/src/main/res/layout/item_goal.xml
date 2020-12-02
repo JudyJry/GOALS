@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="125dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/shape_goal_item_bg_5r">
+
+    <TextView
+        android:id="@+id/Goal_Item_Title"
+        style="@style/Goal_Item_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:maxWidth="200dp"
+        android:maxHeight="27dp"
+        android:text="@string/Goal_Item_Title_1"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/Goal_Item_Subtitle"
+        style="@style/Goal_Item_Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Goal_Item_Title"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/Goal_Item_Subtitle_1" />
+
+    <ImageView
+        android:id="@+id/Goal_Item_member_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/Goal_Item_member"
+        android:contentDescription="@string/Goal_Item_member_c"
+        app:srcCompat="@drawable/ic_join" />
+
+    <TextView
+        android:id="@+id/Goal_Item_member"
+        style="@style/Goal_Item_Member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="12dp"
+
+        android:text="@string/n_a" />
+
+    <ImageView
+        android:id="@+id/goal_time_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/Act_Item_Time"
+        app:srcCompat="@drawable/ic_time" />
+
+    <TextView
+        android:id="@+id/goal_time_text"
+        style="@style/Goal_Item_Context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="12dp"
+        android:layout_toEndOf="@+id/goal_time_img"
+        android:text="@string/Goal_Item_Time_1" />
+
+    <Button
+        android:id="@+id/goal_join_button"
+        style="@style/Orange_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/Goal_join_c"
+        tools:ignore="RelativeOverlap" />
+
+</RelativeLayout>
