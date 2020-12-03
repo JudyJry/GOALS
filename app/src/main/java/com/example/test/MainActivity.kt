@@ -37,20 +37,20 @@ class MainActivity : AppCompatActivity() {
         val navViewDrawer: NavigationView = findViewById(R.id.nav_view)
         navViewDrawer.setNavigationItemSelectedListener(navigationListener)
 
-        val navListButton : ImageButton = findViewById(R.id.nav_toolbar_icon)
-        navListButton.setOnClickListener(navListOnClick)
+        val navView: BottomNavigationView = findViewById(R.id.footer)
+        navView.setOnNavigationItemSelectedListener(bottomNavigationListener)
+
         val listButton :ImageButton = findViewById(R.id.toolbar_list)
         listButton.setOnClickListener(listOnClick)
 
-        val navView: BottomNavigationView = findViewById(R.id.footer)
-        navView.setOnNavigationItemSelectedListener(bottomNavigationListener)
     }
 
     private val listOnClick = View.OnClickListener {
         drawerLayout.openDrawer(GravityCompat.START)
     }
 
-    private val navListOnClick = View.OnClickListener {
+    @Suppress("UNUSED_PARAMETER")
+    fun navListOnClick(view: View) {
         drawerLayout.closeDrawer(GravityCompat.START)
     }
 
@@ -129,6 +129,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
 }
 
 
