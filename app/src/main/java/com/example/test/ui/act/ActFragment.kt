@@ -1,10 +1,7 @@
 package com.example.test.ui.act
 
-import android.content.ContentValues.TAG
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,7 +31,6 @@ class ActFragment : Fragment() {
                             Intent(root.context, ChildActivity::class.java)
                         intent.putExtra("PageName", "Act_Item")
                         intent.putExtra("ActInt", position)
-                        Log.d(TAG, "Pos:$position")
                         startActivityForResult(intent, 0)
                     }
 

@@ -1,8 +1,6 @@
 package com.example.test
 
-import android.content.ContentValues
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
@@ -51,7 +49,6 @@ class ChildActivity : AppCompatActivity() {
             "Act_Item" -> {
                 ctbTitle.setText(R.string.Main_Act_c)
                 val pos: Int = intent.getIntExtra("ActInt", 0)
-                Log.d(ContentValues.TAG, "Pos:$pos")
                 changePage(R.id.child_nav_host_fragment, ActItemFragment(pos))
                 return true
             }

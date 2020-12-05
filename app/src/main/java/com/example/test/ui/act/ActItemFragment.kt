@@ -1,10 +1,8 @@
 package com.example.test.ui.act
 
 import android.app.AlertDialog
-import android.content.ContentValues
 import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +22,6 @@ class ActItemFragment(private var itemPos:Int) : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d(ContentValues.TAG, "Pos:$itemPos")
         actViewModel = ViewModelProvider(this).get(ActViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_act_item, container, false)
         val img :ImageView= root.findViewById(R.id.act_item_imageView)

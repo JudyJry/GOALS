@@ -14,15 +14,18 @@ import androidx.core.content.ContextCompat
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
+
 class LoginUser : AppCompatActivity() {
     private lateinit var edId: EditText
     private lateinit var edPassword: EditText
+    lateinit var id:String
+    lateinit var password:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         actionBar?.hide()
         setContentView(R.layout.activity_login)
-        this.window.statusBarColor = ContextCompat.getColor(this,R.color.white)
+        this.window.statusBarColor = ContextCompat.getColor(this, R.color.white)
         this.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         val loginButton : Button = findViewById(R.id.Login_button)
         val googleButton : Button = findViewById(R.id.Google_button)
@@ -33,14 +36,15 @@ class LoginUser : AppCompatActivity() {
         loginVal()
     }
 
+
     private fun loginVal() {
         edId = findViewById(R.id.editTextUsername)
         edPassword = findViewById(R.id.editTextPassword)
     }
 
     private val loginUser = View.OnClickListener{
-        val id = edId.text.toString()
-        val password = edPassword.text.toString()
+        id = edId.text.toString()
+        password = edPassword.text.toString()
         if (id == "USER" && password == "user") {
             loginSuccess
         }
@@ -50,6 +54,7 @@ class LoginUser : AppCompatActivity() {
         edId.text.clear()
         edPassword.text.clear()
     }
+
 
     private val loginSuccess = View.OnClickListener{
         toast("登入成功")
