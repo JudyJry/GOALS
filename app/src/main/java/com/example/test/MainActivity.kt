@@ -18,22 +18,17 @@ import com.example.test.ui.sort.SortFragment
 import com.example.test.ui.user.UserFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
-import com.google.firebase.database.FirebaseDatabase
 import org.jetbrains.anko.startActivity
-
 
 class MainActivity : AppCompatActivity() {
     lateinit var tbtitle: TextView
     private lateinit var drawerLayout: DrawerLayout
-    private lateinit var database: FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         this.window.statusBarColor = ContextCompat.getColor(this, R.color.deep_cyan)
         this.window.decorView.systemUiVisibility = 0
-
-        database =  FirebaseDatabase.getInstance()
 
         setSupportActionBar(findViewById(R.id.Toolbar))
         tbtitle = findViewById(R.id.toolbar_title)

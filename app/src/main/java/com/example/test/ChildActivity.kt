@@ -30,7 +30,7 @@ class ChildActivity : AppCompatActivity() {
         transaction.replace(host, page).commit()
     }
 
-    private val backOnClick = View.OnClickListener{
+    private val backOnClick = View.OnClickListener {
         super.onBackPressed()
     }
 
@@ -50,6 +50,11 @@ class ChildActivity : AppCompatActivity() {
                 ctbTitle.setText(R.string.Main_Act_c)
                 val pos: Int = intent.getIntExtra("ActInt", 0)
                 changePage(R.id.child_nav_host_fragment, ActItemFragment(pos))
+                return true
+            }
+            "Goal_Item" -> {
+                ctbTitle.setText(R.string.Main_Goal_c)
+                val pos: Int = intent.getIntExtra("GoalInt", 0)
                 return true
             }
             else -> {

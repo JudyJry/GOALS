@@ -18,8 +18,6 @@ import org.jetbrains.anko.toast
 class LoginUser : AppCompatActivity() {
     private lateinit var edId: EditText
     private lateinit var edPassword: EditText
-    lateinit var id:String
-    lateinit var password:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,10 +41,12 @@ class LoginUser : AppCompatActivity() {
     }
 
     private val loginUser = View.OnClickListener{
-        id = edId.text.toString()
-        password = edPassword.text.toString()
+        val id = edId.text.toString()
+        val password = edPassword.text.toString()
         if (id == "USER" && password == "user") {
-            loginSuccess
+            toast("登入成功")
+            startActivity<MainActivity>()
+            this.finish()
         }
         else{
             toast("登入失敗")
