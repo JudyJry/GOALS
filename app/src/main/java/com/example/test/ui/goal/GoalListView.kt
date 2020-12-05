@@ -28,10 +28,10 @@ class GoalListView(val context: Context?, val item: MutableList<Map<String,Strin
 
     class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val joinBtn: Button = itemView.findViewById(R.id.goal_join_button)
-        private val title: TextView = itemView.findViewById(R.id.Goal_Item_Title)
-        private val subtitle: TextView = itemView.findViewById(R.id.Goal_Item_Subtitle)
-        private val time: TextView = itemView.findViewById(R.id.Goal_Item_Time)
-        private val member: TextView = itemView.findViewById(R.id.Goal_Item_member)
+        private val title: TextView = itemView.findViewById(R.id.Goal_Title)
+        private val subtitle: TextView = itemView.findViewById(R.id.Goal_Subtitle)
+        private val time: TextView = itemView.findViewById(R.id.Goal_Time)
+        private val member: TextView = itemView.findViewById(R.id.Goal_member)
         fun bindData(p: Int) {
             val g = GoalItem.g[p]
             val mem = g["member"]+"/"+g["maxMember"]

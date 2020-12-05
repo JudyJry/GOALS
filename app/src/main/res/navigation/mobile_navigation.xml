@@ -40,4 +40,9 @@
         android:name="com.example.test.ActItemFragment"
         android:label="fragment_act_item"
         tools:layout="@layout/fragment_act_item" />
+    <fragment
+        android:id="@+id/GoalItemFragment"
+        android:name="com.example.test.GoalItemFragment"
+        android:label="fragment_goal_item"
+        tools:layout="@layout/fragment_goal_item" />
 </navigation>

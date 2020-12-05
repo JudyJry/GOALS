@@ -47,21 +47,27 @@
         <item name="android:textColor">@color/deep_purple</item>
         <item name="android:textSize">16sp</item>
     </style>
-    <style name="Goal_Item_Title">
+    <style name="Goal_Title">
         <item name="android:textColor">@color/deep_purple</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
-    <style name="Goal_Item_Subtitle">
+    <style name="Goal_Title.item">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="Goal_Subtitle">
         <item name="android:textColor">@color/deep_purple</item>
         <item name="android:textSize">15sp</item>
     </style>
-    <style name="Goal_Item_Member">
+    <style name="Goal_Member">
         <item name="android:textColor">@color/deep_orange</item>
         <item name="android:textSize">15sp</item>
     </style>
-    <style name="Goal_Item_Context">
+    <style name="Goal_Context">
         <item name="android:textColor">@color/deep_purple</item>
         <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Goal_Context.item">
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>

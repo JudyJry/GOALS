@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.test.ui.act.ActItemFragment
+import com.example.test.ui.goal.GoalItemFragment
 import com.example.test.ui.setting.SettingFragment
 
 class ChildActivity : AppCompatActivity() {
@@ -55,6 +56,7 @@ class ChildActivity : AppCompatActivity() {
             "Goal_Item" -> {
                 ctbTitle.setText(R.string.Main_Goal_c)
                 val pos: Int = intent.getIntExtra("GoalInt", 0)
+                changePage(R.id.child_nav_host_fragment, GoalItemFragment(pos))
                 return true
             }
             else -> {
