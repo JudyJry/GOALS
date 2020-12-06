@@ -76,6 +76,7 @@
     <string name="Goal_Item_Location">地點</string>
     <string name="n_a">N/A</string>
     <string name="Goal_cancel_c">取消參加</string>
+    <string name="Goal_new_item">新增目標</string>
 
 
 </resources>
