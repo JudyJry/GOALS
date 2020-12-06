@@ -82,7 +82,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:contentDescription="@string/Goal_Item_author_c"
-            app:srcCompat="@drawable/goal_user_icon" />
+            app:srcCompat="@drawable/goal_user_icon_1" />
 
         <ImageView
             android:id="@+id/Goal_member_icon"
@@ -154,6 +154,7 @@
             android:text="@string/Goal_Item_Location" />
 
         <ImageView
+            android:id="@+id/goal_item_location_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/goal_item_location"
@@ -165,7 +166,7 @@
             android:layout_marginBottom="@dimen/margin_goal_10dp"
             android:contentDescription="@string/Goal_Item_Location"
             android:minHeight="220dp"
-            app:srcCompat="@drawable/goal_location" />
+            app:srcCompat="@drawable/goal_location_1" />
 
 
     </RelativeLayout>

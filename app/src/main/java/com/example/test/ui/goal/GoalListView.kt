@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.test.GoalItem
 import com.example.test.R
 
-class GoalListView(val context: Context?, val item: MutableList<Map<String,String>>) :
+class GoalListView(val context: Context?,
+                   val item: MutableList<MutableMap<String, Any>>) :
     RecyclerView.Adapter<GoalListView.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val itemView =
@@ -34,10 +35,10 @@ class GoalListView(val context: Context?, val item: MutableList<Map<String,Strin
         private val member: TextView = itemView.findViewById(R.id.Goal_member)
         fun bindData(p: Int) {
             val g = GoalItem.g[p]
-            val mem = g["member"]+"/"+g["maxMember"]
-            title.text = g["title"]
-            subtitle.text = g["subtitle"]
-            time.text = g["time"]
+            val mem = g["member"].toString()+"/"+g["maxMember"].toString()
+            title.text = g["title"] as CharSequence
+            subtitle.text = g["subtitle"] as CharSequence
+            time.text = g["time"] as CharSequence
             member.text = mem
 
             if (GoalItem.joined[p]) {

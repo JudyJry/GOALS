@@ -24,7 +24,7 @@ class GoalFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_goal, container, false)
         list = root.findViewById(R.id.Goal_list)
         list.layoutManager = LinearLayoutManager(this.context)
-        list.adapter = GoalListView(root.context,GoalItem.g)
+        list.adapter = GoalListView(root.context, GoalItem.g)
         list.addOnItemTouchListener(
             RecyclerItemClickListenr(
                 root.context, list, object : RecyclerItemClickListenr.OnItemClickListener {

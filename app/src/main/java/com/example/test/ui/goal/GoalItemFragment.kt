@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.example.test.GoalItem
@@ -16,7 +17,6 @@ import com.example.test.R
 class GoalItemFragment(private var itemPos: Int) : Fragment() {
     private lateinit var goalViewModel: GoalViewModel
     private lateinit var joinBtn: Button
-    private lateinit var mText:String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,9 +28,11 @@ class GoalItemFragment(private var itemPos: Int) : Fragment() {
         val title: TextView = root.findViewById(R.id.goal_item_title)
         val time: TextView = root.findViewById(R.id.goal_item_time)
         val author: TextView = root.findViewById(R.id.goal_item_author)
+        val user:ImageView = root.findViewById(R.id.goal_item_user)
         val member: TextView = root.findViewById(R.id.goal_item_member)
         val context: TextView = root.findViewById(R.id.goal_item_context)
         val location: TextView = root.findViewById(R.id.goal_item_location)
+        val locationImage : ImageView = root.findViewById(R.id.goal_item_location_image)
         joinBtn = root.findViewById(R.id.goal_join_button)
         joinBtn.setOnClickListener(joinOnClick)
 
@@ -40,11 +42,9 @@ class GoalItemFragment(private var itemPos: Int) : Fragment() {
         goalViewModel.mAuthor.observe(viewLifecycleOwner, { author.text = it })
         goalViewModel.mMember.observe(viewLifecycleOwner, { member.text = it })
         goalViewModel.mContext.observe(viewLifecycleOwner, { context.text = it })
-        goalViewModel.mJoined.observe(viewLifecycleOwner, {
-            if (it) {
-                joined()
-            }
-        })
+        goalViewModel.mJoined.observe(viewLifecycleOwner, { if (it) { joined() } })
+        goalViewModel.mUser.observe(viewLifecycleOwner, { user.setImageResource(it) })
+        goalViewModel.mImg.observe(viewLifecycleOwner, { locationImage.setImageResource(it) })
         return root
     }
 
@@ -65,6 +65,11 @@ class GoalItemFragment(private var itemPos: Int) : Fragment() {
         val at: TextView = a.findViewById(R.id.act_alert_text)
         at.text = "參加成功"
         GoalItem.joined[itemPos] = true
+        val g = GoalItem.g[itemPos]
+        var m : Int = g["member"] as Int
+        m += 1
+        g["member"] = m
+
         joined()
     }
 
@@ -91,6 +96,10 @@ class GoalItemFragment(private var itemPos: Int) : Fragment() {
         val at: TextView = a.findViewById(R.id.act_alert_text)
         at.text = "取消成功"
         GoalItem.joined[itemPos] = false
+        val g = GoalItem.g[itemPos]
+        var m : Int = g["member"] as Int
+        m += -1
+        g["member"] = m
         cancelJoined()
     }
 
