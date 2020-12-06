@@ -1,6 +1,14 @@
 package com.example.test
 
 object GoalItem : ArrayList<Int>() {
+    private var itemPos :Int = 0
+    fun setItemPos(i : Int) {
+        itemPos = i
+    }
+    fun  getItemPos() : Int{
+        return itemPos
+    }
+
     val joined: MutableList<Boolean> = arrayListOf(
         false,
         false,
@@ -10,7 +18,7 @@ object GoalItem : ArrayList<Int>() {
     )
     val g = mutableListOf(
         mapOf(
-            "author" to "weme0110",
+            "author" to "偉米",
             "context" to "我會在10月1號開始在大佳河濱公園跑步，歡迎大家一起來努力運動！",
             "location" to "大佳河濱公園",
             "maxMember" to "30",
@@ -20,7 +28,7 @@ object GoalItem : ArrayList<Int>() {
             "title" to "每天跑10KM"
         ),
         mapOf(
-            "author" to "USER",
+            "author" to "可可愛愛",
             "context" to "大家一起做到共同目標吧！",
             "location" to "不限制地點",
             "maxMember" to "30",
@@ -30,7 +38,7 @@ object GoalItem : ArrayList<Int>() {
             "title" to "每天做一百個伏地挺身"
         ),
         mapOf(
-            "author" to "USER",
+            "author" to "一日千騎",
             "context" to "一個人騎，很累，但是，很多人騎，就不會了。",
             "location" to "各地腳踏車道",
             "maxMember" to "30",
@@ -40,8 +48,8 @@ object GoalItem : ArrayList<Int>() {
             "title" to "每天騎Ubike10km"
         ),
         mapOf(
-            "author" to "USER",
-            "context" to "都來都來喔",
+            "author" to "Yee醬",
+            "context" to "都來都來yeeeee",
             "location" to "不限制地點",
             "maxMember" to "30",
             "member" to "7",
@@ -50,7 +58,7 @@ object GoalItem : ArrayList<Int>() {
             "title" to "每天仰臥起坐200下"
         ),
         mapOf(
-            "author" to "whiteMagic",
+            "author" to "白魔女",
             "context" to "大家一起朝著小蠻腰努力吧！",
             "location" to "不限制地點",
             "maxMember" to "30",

@@ -10,4 +10,6 @@
     <dimen name="elevation_page">0dp</dimen>
     <dimen name="banner_height">207dp</dimen>
     <dimen name="width_act_item_context">280dp</dimen>
+    <dimen name="margin_goal_15dp">15dp</dimen>
+    <dimen name="margin_goal_10dp">10dp</dimen>
 </resources>
