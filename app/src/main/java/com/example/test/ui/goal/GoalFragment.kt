@@ -14,15 +14,18 @@ import com.example.test.ChildActivity
 import com.example.test.GoalItem
 import com.example.test.R
 import com.example.test.RecyclerItemClickListenr
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class GoalFragment : Fragment() {
     private lateinit var list: RecyclerView
+    private lateinit var fab : FloatingActionButton
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_goal, container, false)
         list = root.findViewById(R.id.Goal_list)
+        fab = root.findViewById(R.id.goal_new_button)
         list.layoutManager = LinearLayoutManager(this.context)
         list.adapter = GoalListView(root.context, GoalItem.g)
         list.addOnItemTouchListener(
@@ -40,6 +43,11 @@ class GoalFragment : Fragment() {
                     }
                 })
         )
+        fab.setOnClickListener {
+            val intent = Intent(root.context, ChildActivity::class.java)
+            intent.putExtra("PageName", "Goal_New")
+            startActivityForResult(intent, 0)
+        }
         return root
     }
 }

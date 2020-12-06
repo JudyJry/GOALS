@@ -32,6 +32,9 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:elevation">5dp</item>
     </style>
+    <style name="Cyan_Button" parent="Orange_Button">
+        <item name="android:background">@drawable/shape_cyan_button</item>
+    </style>
     <style name="Act_Item_Title">
         <item name="android:textColor">@color/deep_purple</item>
         <item name="android:textSize">24sp</item>
@@ -69,5 +72,17 @@
     </style>
     <style name="Goal_Context.item">
         <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Goal_New_EditText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/deep_purple</item>
+        <item name="android:background">@drawable/goal_new_edit_bg</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+    <style name="Goal_New_EditText.2">
+        <item name="android:background">@drawable/goal_new_edit_bg_2</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
     </style>
 </resources>

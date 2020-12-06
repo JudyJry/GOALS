@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:ns2="http://schemas.android.com/tools">
     <style name="Theme.Test" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <item name="colorPrimary">@color/bright_orange</item>
         <item name="colorPrimaryDark">@color/deep_cyan</item>

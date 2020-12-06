@@ -77,6 +77,15 @@
     <string name="n_a">N/A</string>
     <string name="Goal_cancel_c">取消參加</string>
     <string name="Goal_new_item">新增目標</string>
+    <string name="Goal_new_item_c">新增</string>
+    <string name="Goal_new_title_c">請輸入標題</string>
+    <string name="Goal_new_subtitle_c">請輸入副標題</string>
+    <string name="Goal_new_start_date_c">開始日期</string>
+    <string name="Goal_new_end_date_c">結束日期</string>
+    <string name="Goal_new_context_c">請輸入說明內容</string>
+    <string name="Goal_new_location_c">請輸入地點</string>
+    <string name="Goal_new_img_c">選擇照片</string>
+    <string name="Goal_new_img_text_c">尚未選擇照片</string>
 
 
 </resources>
