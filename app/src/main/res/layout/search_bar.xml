@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_search_bar"
+    android:background="@color/white"
+    >
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        style="@style/Goal_Search"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:autofillHints="@string/Goal_search_c"
+        android:hint="@string/Goal_search_c"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/search_text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/search_edit_text"
+        android:layout_alignTop="@+id/search_edit_text"
+        android:layout_alignBottom="@+id/search_edit_text"
+        android:layout_marginEnd="@dimen/margin_goal_10dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/Goal_search_c"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"/>
+</RelativeLayout>

@@ -6,12 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient_background"
     tools:context=".ui.goal.GoalFragment">
+    <include layout="@layout/search_bar"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Goal_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/item_goal" />
+        tools:listitem="@layout/item_goal"
+        android:layout_marginTop="@dimen/height_search_bar"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/goal_new_button"
