@@ -1,7 +1,12 @@
 package com.example.test
 
+import android.content.Context
 import android.os.Bundle
+import android.os.IBinder
+import android.view.MotionEvent
 import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -68,6 +73,42 @@ class ChildActivity : AppCompatActivity() {
             else -> {
                 return false
             }
+        }
+    }
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
+        if (ev.action == MotionEvent.ACTION_DOWN) {
+            val v = currentFocus
+            if (isShouldHideInput(v, ev)) {
+                hideSoftInput(v!!.windowToken)
+            }
+        }
+        return super.dispatchTouchEvent(ev)
+    }
+
+    private fun isShouldHideInput(v: View?, event: MotionEvent): Boolean {
+        if (v != null && v is EditText) {
+            val l = intArrayOf(0, 0)
+            v.getLocationInWindow(l)
+            val left = l[0]
+            val top = l[1]
+            val bottom = top + v.getHeight()
+            val right = (left
+                    + v.getWidth())
+            if (!(event.x > left && event.x < right && event.y > top && event.y < bottom)) {
+                return true
+            }
+        }
+        return false
+    }
+
+    private fun hideSoftInput(token: IBinder?) {
+        if (token != null) {
+            val im: InputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            im.hideSoftInputFromWindow(
+                token,
+                InputMethodManager.HIDE_NOT_ALWAYS
+            )
         }
     }
 }

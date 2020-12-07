@@ -84,6 +84,7 @@
     <string name="Goal_new_end_date_c">結束日期</string>
     <string name="Goal_new_context_c">請輸入說明內容</string>
     <string name="Goal_new_location_c">請輸入地點</string>
+    <string name="Goal_new_max_member_c">請輸入最大人數</string>
     <string name="Goal_new_img_c">選擇照片</string>
     <string name="Goal_new_img_text_c">尚未選擇照片</string>
 

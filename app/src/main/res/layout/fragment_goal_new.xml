@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_goal_10dp"
         android:background="@drawable/shape_goal_item_bg_5r">
 
@@ -74,7 +74,7 @@
             app:layout_constraintTop_toBottomOf="@+id/goal_new_subtitle" />
 
         <EditText
-            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:drawableEnd="@drawable/ic_search"
             android:id="@+id/goal_new_location"
             style="@style/Goal_New_EditText"
             android:layout_width="match_parent"
@@ -86,6 +86,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/goal_new_end_date" />
+
+        <EditText
+            android:id="@+id/goal_new_max_member"
+            style="@style/Goal_New_EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_goal_10dp"
+            android:autofillHints="@string/Goal_new_max_member_c"
+            android:hint="@string/Goal_new_max_member_c"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goal_new_location" />
 
         <EditText
             android:id="@+id/goal_new_context"
@@ -100,7 +113,7 @@
             android:gravity="start|top"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_new_location" />
+            app:layout_constraintTop_toBottomOf="@+id/goal_new_max_member" />
 
         <Button
             android:id="@+id/goal_img_button"
@@ -130,11 +143,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_goal_10dp"
             android:text="@string/Goal_new_item_c"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/goal_img_button" />
 
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+</ScrollView>
