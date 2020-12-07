@@ -74,7 +74,7 @@
         <item name="android:textSize">16sp</item>
     </style>
     <style name="Goal_New_EditText">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/deep_purple</item>
         <item name="android:background">@drawable/goal_new_edit_bg</item>
         <item name="android:paddingLeft">12dp</item>
