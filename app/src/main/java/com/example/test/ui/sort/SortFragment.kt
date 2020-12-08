@@ -17,8 +17,7 @@ class SortFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_sort, container, false)
-        val navView: NavigationView = root.findViewById(R.id.sort_nav_list)
-        navView.isHorizontalScrollBarEnabled = false
+
         return root
     }
 }

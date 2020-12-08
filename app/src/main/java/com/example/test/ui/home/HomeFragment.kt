@@ -1,5 +1,6 @@
 package com.example.test.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.example.test.ActItem
+import com.example.test.ChildActivity
 import com.example.test.R
 
 class HomeFragment : Fragment() {
@@ -34,6 +36,13 @@ class HomeFragment : Fragment() {
         val homeBannerAdapter = HomeBannerAdapter()
         homeBannerAdapter.setList(ActItem.List)
         banner.adapter = homeBannerAdapter
+        banner.setOnClickListener {
+            val intent =
+                Intent(root.context, ChildActivity::class.java)
+            intent.putExtra("PageName", "Act_Item")
+            intent.putExtra("ActInt", banner.currentItem)
+            startActivityForResult(intent, 0)
+        }
 
         return root
     }

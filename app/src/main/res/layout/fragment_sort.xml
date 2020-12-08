@@ -24,18 +24,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/sort_nav_list"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sort_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_sort_list"
         android:layout_marginEnd="@dimen/margin_sort_list"
         android:background="@color/white"
-        app:itemBackground="@drawable/sort_item_bg"
-        app:itemTextColor="@color/deep_purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sort_nav_header"
-        app:menu="@menu/sort_list" />
+        tools:listitem="@layout/item_sort"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

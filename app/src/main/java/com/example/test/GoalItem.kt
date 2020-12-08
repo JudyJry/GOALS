@@ -1,11 +1,12 @@
 package com.example.test
 
 object GoalItem : ArrayList<Int>() {
-    private var itemPos :Int = 0
-    fun setItemPos(i : Int) {
+    private var itemPos: Int = 0
+    fun setItemPos(i: Int) {
         itemPos = i
     }
-    fun  getItemPos() : Int{
+
+    fun getItemPos(): Int {
         return itemPos
     }
 
@@ -18,7 +19,7 @@ object GoalItem : ArrayList<Int>() {
     )
 
     val g = mutableListOf(
-        mutableMapOf<String,Any>(
+        mutableMapOf<String, Any>(
             "author" to "偉米",
             "context" to "我10/1號起將在大佳河濱公園舉辦大家一起路跑10km的活動，為期一個月的時間，我們的活動終指是想要大家一起堅持、團結，最後完成目標。\n" +
                     "若您對我辦的這個活動有興趣，歡迎您加入我們喲～",
@@ -31,7 +32,7 @@ object GoalItem : ArrayList<Int>() {
             "user" to R.drawable.goal_user_icon_1,
             "img" to R.drawable.goal_location_1
         ),
-        mutableMapOf<String,Any>(
+        mutableMapOf<String, Any>(
             "author" to "可可愛愛",
             "context" to "大家一起做到共同目標吧！",
             "location" to "不限制地點",
@@ -43,7 +44,7 @@ object GoalItem : ArrayList<Int>() {
             "user" to R.drawable.goal_user_icon_2,
             "img" to R.drawable.goal_location_5
         ),
-        mutableMapOf<String,Any>(
+        mutableMapOf<String, Any>(
             "author" to "一日千騎",
             "context" to "一個人騎，很累，但是，很多人騎，就不會了。",
             "location" to "各地腳踏車道",
@@ -55,7 +56,7 @@ object GoalItem : ArrayList<Int>() {
             "user" to R.drawable.goal_user_icon_3,
             "img" to R.drawable.goal_location_5
         ),
-        mutableMapOf<String,Any>(
+        mutableMapOf<String, Any>(
             "author" to "Yee醬",
             "context" to "都來都來yeeeee",
             "location" to "不限制地點",
@@ -67,7 +68,7 @@ object GoalItem : ArrayList<Int>() {
             "user" to R.drawable.goal_user_icon_4,
             "img" to R.drawable.goal_location_5
         ),
-        mutableMapOf<String,Any>(
+        mutableMapOf<String, Any>(
             "author" to "白魔女",
             "context" to "大家一起朝著小蠻腰努力吧！",
             "location" to "不限制地點",

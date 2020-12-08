@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.test.ActItem
 import com.example.test.ChildActivity
 import com.example.test.R
-import com.example.test.RecyclerItemClickListenr
+import com.example.test.RecyclerItemClickListener
 
 class ActFragment : Fragment() {
     private lateinit var list: RecyclerView
@@ -24,8 +24,8 @@ class ActFragment : Fragment() {
         list.layoutManager = LinearLayoutManager(this.context)
         list.adapter = ActListView(root.context, ActItem.List)
         list.addOnItemTouchListener(
-            RecyclerItemClickListenr(
-                root.context, list, object : RecyclerItemClickListenr.OnItemClickListener {
+            RecyclerItemClickListener(
+                root.context, list, object : RecyclerItemClickListener.OnItemClickListener {
                     override fun onItemClick(view: View, position: Int) {
                         val intent =
                             Intent(root.context, ChildActivity::class.java)
