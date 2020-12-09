@@ -15,6 +15,7 @@ import com.example.test.ui.act.ActItemFragment
 import com.example.test.ui.goal.GoalItemFragment
 import com.example.test.ui.goal.GoalNewFragment
 import com.example.test.ui.setting.SettingFragment
+import com.example.test.ui.sort.SortItemFragment
 
 class ChildActivity : AppCompatActivity() {
     lateinit var ctbTitle: TextView
@@ -68,6 +69,12 @@ class ChildActivity : AppCompatActivity() {
             "Goal_New" -> {
                 ctbTitle.setText(R.string.Goal_new_item)
                 changePage(R.id.child_nav_host_fragment, GoalNewFragment())
+                return true
+            }
+            "Sort_Item"->{
+                val pos: Int = intent.getIntExtra("SortInt", 0)
+                ctbTitle.setText(SortItem.s[pos])
+                changePage(R.id.child_nav_host_fragment, SortItemFragment(pos))
                 return true
             }
             else -> {

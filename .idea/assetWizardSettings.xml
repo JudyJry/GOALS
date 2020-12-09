@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_required" />
-                            <entry key="sourceFile" value="D:\作業\互動設計(三)_V2013C\icon\Required.svg" />
+                            <entry key="outputName" value="ic_heart2" />
+                            <entry key="sourceFile" value="D:\作業\互動設計(三)_V2013C\icon\heart2.svg" />
                           </map>
                         </option>
                       </PersistentState>
