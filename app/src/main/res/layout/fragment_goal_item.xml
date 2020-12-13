@@ -35,8 +35,8 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="@dimen/margin_goal_10dp"
             android:layout_marginEnd="@dimen/margin_goal_15dp"
-            android:layout_toEndOf="@+id/goal_item_title"
-            android:text="@string/Goal_join_c" />
+            android:text="@string/Goal_join_c"
+            tools:ignore="RelativeOverlap" />
 
         <ImageView
             android:id="@+id/goal_time_img"

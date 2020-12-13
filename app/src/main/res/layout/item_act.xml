@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/act_imageView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/banner_height"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/Main_Act_c"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
