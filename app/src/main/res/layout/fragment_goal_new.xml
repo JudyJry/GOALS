@@ -1,155 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GoalNewFragment"
-    android:background="@drawable/gradient_background">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin_goal_10dp"
+    android:background="@drawable/shape_goal_item_bg_5r"
+    tools:context=".GoalNewFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <EditText
+        android:id="@+id/goal_new_title"
+        style="@style/Goal_New_EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_goal_10dp"
-        android:background="@drawable/shape_goal_item_bg_5r">
+        android:autofillHints="@string/Goal_new_title_c"
+        android:hint="@string/Goal_new_title_c"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/goal_new_title"
-            style="@style/Goal_New_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_goal_10dp"
-            android:autofillHints="@string/Goal_new_title_c"
-            android:hint="@string/Goal_new_title_c"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/goal_new_subtitle"
+        style="@style/Goal_New_EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_goal_10dp"
+        android:autofillHints="@string/Goal_new_subtitle_c"
+        android:hint="@string/Goal_new_subtitle_c"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_new_title" />
 
-        <EditText
-            android:id="@+id/goal_new_subtitle"
-            style="@style/Goal_New_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_goal_10dp"
-            android:autofillHints="@string/Goal_new_subtitle_c"
-            android:hint="@string/Goal_new_subtitle_c"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_new_title" />
+    <TextView
+        android:id="@+id/goal_new_start_date"
+        style="@style/Goal_New_EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_goal_10dp"
+        android:layout_marginTop="@dimen/margin_goal_10dp"
+        android:layout_marginEnd="5dp"
+        android:autofillHints="@string/Goal_new_start_date_c"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:hint="@string/Goal_new_start_date_c"
+        app:layout_constraintEnd_toStartOf="@+id/goal_new_end_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_new_subtitle" />
 
-        <TextView
-            android:id="@+id/goal_new_start_date"
-            style="@style/Goal_New_EditText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_goal_10dp"
-            android:layout_marginTop="@dimen/margin_goal_10dp"
-            android:layout_marginEnd="5dp"
-            android:autofillHints="@string/Goal_new_start_date_c"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:hint="@string/Goal_new_start_date_c"
-            app:layout_constraintEnd_toStartOf="@+id/goal_new_end_date"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_new_subtitle" />
+    <TextView
+        android:id="@+id/goal_new_end_date"
+        style="@style/Goal_New_EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="@dimen/margin_goal_10dp"
+        android:layout_marginEnd="@dimen/margin_goal_10dp"
+        android:autofillHints="@string/Goal_new_end_date_c"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:hint="@string/Goal_new_end_date_c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/goal_new_start_date"
+        app:layout_constraintTop_toBottomOf="@+id/goal_new_subtitle" />
 
-        <TextView
-            android:id="@+id/goal_new_end_date"
-            style="@style/Goal_New_EditText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="@dimen/margin_goal_10dp"
-            android:layout_marginEnd="@dimen/margin_goal_10dp"
-            android:autofillHints="@string/Goal_new_end_date_c"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:hint="@string/Goal_new_end_date_c"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/goal_new_start_date"
-            app:layout_constraintTop_toBottomOf="@+id/goal_new_subtitle" />
+    <EditText
+        android:id="@+id/goal_new_location"
+        style="@style/Goal_New_EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_goal_10dp"
+        android:autofillHints="@string/Goal_new_location_c"
+        android:drawableEnd="@drawable/ic_search"
+        android:hint="@string/Goal_new_location_c"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_new_end_date" />
 
-        <EditText
-            android:id="@+id/goal_new_location"
-            style="@style/Goal_New_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_goal_10dp"
-            android:autofillHints="@string/Goal_new_location_c"
-            android:drawableEnd="@drawable/ic_search"
-            android:hint="@string/Goal_new_location_c"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_new_end_date" />
+    <EditText
+        android:id="@+id/goal_new_max_member"
+        style="@style/Goal_New_EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_goal_10dp"
+        android:autofillHints="@string/Goal_new_max_member_c"
+        android:hint="@string/Goal_new_max_member_c"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_new_location" />
 
-        <EditText
-            android:id="@+id/goal_new_max_member"
-            style="@style/Goal_New_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_goal_10dp"
-            android:autofillHints="@string/Goal_new_max_member_c"
-            android:hint="@string/Goal_new_max_member_c"
-            android:inputType="number"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_new_location" />
+    <EditText
+        android:id="@+id/goal_new_context"
+        style="@style/Goal_New_EditText.2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_goal_10dp"
+        android:autofillHints="@string/Goal_new_context_c"
+        android:gravity="start|top"
+        android:hint="@string/Goal_new_context_c"
+        android:inputType="textMultiLine"
+        android:minHeight="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_new_max_member" />
 
-        <EditText
-            android:id="@+id/goal_new_context"
-            style="@style/Goal_New_EditText.2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="@dimen/margin_goal_10dp"
-            android:autofillHints="@string/Goal_new_context_c"
-            android:gravity="start|top"
-            android:hint="@string/Goal_new_context_c"
-            android:inputType="textMultiLine"
-            android:minHeight="150dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_new_max_member" />
+    <Button
+        android:id="@+id/goal_img_button"
+        style="@style/Cyan_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_goal_10dp"
+        android:text="@string/Goal_new_img_c"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_new_context" />
 
-        <Button
-            android:id="@+id/goal_img_button"
-            style="@style/Cyan_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_goal_10dp"
-            android:text="@string/Goal_new_img_c"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_new_context" />
+    <TextView
+        android:id="@+id/goal_new_img_text"
+        style="@style/Goal_Context.item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_goal_10dp"
+        android:text="@string/Goal_new_img_text_c"
+        app:layout_constraintBottom_toBottomOf="@+id/goal_img_button"
+        app:layout_constraintStart_toEndOf="@+id/goal_img_button"
+        app:layout_constraintTop_toTopOf="@+id/goal_img_button" />
 
-        <TextView
-            android:id="@+id/goal_new_img_text"
-            style="@style/Goal_Context.item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_goal_10dp"
-            android:text="@string/Goal_new_img_text_c"
-            app:layout_constraintBottom_toBottomOf="@+id/goal_img_button"
-            app:layout_constraintStart_toEndOf="@+id/goal_img_button"
-            app:layout_constraintTop_toTopOf="@+id/goal_img_button" />
+    <Button
+        android:id="@+id/goal_new_button"
+        style="@style/Orange_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_goal_10dp"
+        android:layout_marginTop="@dimen/margin_goal_10dp"
+        android:layout_marginEnd="@dimen/margin_goal_10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/Goal_new_item_c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_img_button" />
 
-        <Button
-            android:id="@+id/goal_new_button"
-            style="@style/Orange_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_goal_10dp"
-            android:layout_marginStart="@dimen/margin_goal_10dp"
-            android:layout_marginEnd="@dimen/margin_goal_10dp"
-            android:layout_marginBottom="20dp"
-            android:text="@string/Goal_new_item_c"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_img_button" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
