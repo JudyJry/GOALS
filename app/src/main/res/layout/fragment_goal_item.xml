@@ -160,7 +160,10 @@
         android:layout_marginEnd="@dimen/margin_goal_10dp"
         android:layout_marginBottom="@dimen/margin_goal_10dp"
         android:contentDescription="@string/Goal_Item_Location"
-        android:minHeight="220dp"
+        android:scaleType="centerCrop"
+        android:cropToPadding="true"
+        android:padding="1dp"
+        android:background="@color/deep_purple"
         app:srcCompat="@drawable/goal_location_1" />
 
 

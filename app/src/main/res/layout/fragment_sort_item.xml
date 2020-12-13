@@ -1,13 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SortItemFragment"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/gradient_background"
+    tools:context=".SortItemFragment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_goal_15dp"
+        android:background="@color/white">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/Sort_c"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sort_item_bg" />
 
+        <TextView
+            android:id="@+id/sort_item_title"
+            style="@style/Sort_Item_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_goal_10dp"
+            android:layout_marginTop="70dp"
+            android:text="@string/Sort_Ball_c" />
 
+        <EditText
+            android:id="@+id/search_edit_text"
+            style="@style/Goal_Search"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/sort_item_title"
+            android:layout_alignBottom="@+id/sort_item_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_goal_10dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:layout_marginEnd="@dimen/margin_goal_10dp"
+            android:layout_marginBottom="@dimen/margin_goal_10dp"
+            android:layout_toEndOf="@+id/sort_item_title"
+            android:autofillHints="@string/Goal_search_c"
+            android:hint="@string/Goal_search_c"
+            android:inputType="text" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/sort_item_post_num"
+            style="@style/Goal_Context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sort_item_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_goal_10dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:text="@string/Sort_Item_post_num_c" />
+
+        <TextView
+            android:id="@+id/sort_item_subtitle"
+            style="@style/Goal_Context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sort_item_post_num"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_goal_10dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:layout_marginEnd="@dimen/margin_goal_10dp"
+            android:layout_marginBottom="@dimen/margin_goal_10dp"
+            android:layout_toStartOf="@+id/sort_item_tri"
+            android:text="@string/Sort_Item_subtitle_c" />
+
+        <ImageButton
+            android:id="@+id/sort_item_tri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sort_item_post_num"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/ic_triangle"
+            android:contentDescription="@string/Sort_c" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sort_item_subtitle"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_goal_10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="@dimen/margin_goal_10dp"
+            android:layout_marginBottom="@dimen/margin_goal_10dp"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/Sort_Item_Label"
+                android:layout_width="55dp"
+                android:layout_height="25dp"
+                android:background="@drawable/shape_white_button"
+                android:text="@string/Sort_Aerobic_c" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
