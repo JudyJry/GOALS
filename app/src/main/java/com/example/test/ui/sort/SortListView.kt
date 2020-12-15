@@ -11,7 +11,7 @@ import com.example.test.SortItem
 import com.example.test.R
 
 class SortListView(
-    val context: Context, val item: MutableList<Int>
+    val context: Context, val item: MutableList<MutableMap<String, Any>>
 ) : RecyclerView.Adapter<SortListView.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val itemView =
@@ -20,7 +20,7 @@ class SortListView(
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder.bindData(item[position],position)
+        holder.bindData(item[position]["title"] as Int,position)
     }
 
     override fun getItemCount(): Int {

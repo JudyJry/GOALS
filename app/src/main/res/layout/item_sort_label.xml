@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sort_item_label_item"
+    android:layout_width="55dp"
+    android:layout_height="25dp"
+    style="@style/Sort_Item_Label"
+    android:background="@drawable/shape_white_button"
+    android:text="@string/Sort_Ball_c"
+    android:layout_marginStart="@dimen/margin_goal_10dp"
+    android:layout_marginEnd="@dimen/margin_goal_10dp"/>

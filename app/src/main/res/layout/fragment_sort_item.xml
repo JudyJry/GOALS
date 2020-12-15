@@ -20,7 +20,7 @@
             android:layout_alignParentEnd="true"
             android:contentDescription="@string/Sort_c"
             android:scaleType="centerCrop"
-            android:src="@drawable/sort_item_bg" />
+            android:src="@drawable/sort_item_title_bg" />
 
         <TextView
             android:id="@+id/sort_item_title"
@@ -87,7 +87,8 @@
             android:background="@drawable/ic_triangle"
             android:contentDescription="@string/Sort_c" />
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sort_label_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/sort_item_subtitle"
@@ -95,17 +96,10 @@
             android:layout_alignParentEnd="true"
             android:layout_marginStart="@dimen/margin_goal_10dp"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="@dimen/margin_goal_10dp"
-            android:layout_marginBottom="@dimen/margin_goal_10dp"
-            android:orientation="horizontal">
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            tools:listitem="@layout/item_sort_label"/>
 
-            <Button
-                style="@style/Sort_Item_Label"
-                android:layout_width="55dp"
-                android:layout_height="25dp"
-                android:background="@drawable/shape_white_button"
-                android:text="@string/Sort_Aerobic_c" />
-        </LinearLayout>
 
     </RelativeLayout>
 </ScrollView>

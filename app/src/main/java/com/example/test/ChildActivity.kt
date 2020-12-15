@@ -73,7 +73,7 @@ class ChildActivity : AppCompatActivity() {
             }
             "Sort_Item"->{
                 val pos: Int = intent.getIntExtra("SortInt", 0)
-                ctbTitle.setText(SortItem.s[pos])
+                ctbTitle.setText(SortItem.s[pos]["title"] as Int)
                 changePage(R.id.child_nav_host_fragment, SortItemFragment(pos))
                 return true
             }

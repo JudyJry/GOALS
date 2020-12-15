@@ -18,11 +18,35 @@ object SortItem : ArrayList<Int>() {
         false
     )
 
-    val s: MutableList<Int> = arrayListOf(
-        R.string.Sort_Ball_c,
-        R.string.Sort_Aerobic_c,
-        R.string.Sort_Outdoor_c,
-        R.string.Sort_Indoor_c,
-        R.string.Sort_Water_c
+    private val ballLabel = mutableListOf("籃球","羽球","排球")
+
+    val s = mutableListOf(
+        mutableMapOf<String, Any>(
+            "title" to R.string.Sort_Ball_c,
+            "subtitle" to "",
+            "label" to ballLabel
+        ),
+        mutableMapOf<String, Any>(
+            "title" to R.string.Sort_Aerobic_c,
+            "subtitle" to "",
+            "label" to ballLabel
+        ),
+        mutableMapOf<String, Any>(
+            "title" to R.string.Sort_Outdoor_c,
+            "subtitle" to "",
+            "label" to ballLabel
+        ),
+        mutableMapOf<String, Any>(
+            "title" to R.string.Sort_Indoor_c,
+            "subtitle" to "",
+            "label" to ballLabel
+        ),
+        mutableMapOf<String, Any>(
+            "title" to R.string.Sort_Water_c,
+            "subtitle" to "",
+            "label" to ballLabel
+        ),
     )
+
+
 }

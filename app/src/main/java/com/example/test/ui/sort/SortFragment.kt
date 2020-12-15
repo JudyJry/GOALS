@@ -13,7 +13,6 @@ import com.example.test.ChildActivity
 import com.example.test.R
 import com.example.test.RecyclerItemClickListener
 import com.example.test.SortItem
-import org.jetbrains.anko.image
 
 class SortFragment : Fragment() {
     override fun onCreateView(
