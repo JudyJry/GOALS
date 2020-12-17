@@ -90,6 +90,8 @@
     <string name="Goal_search_c">搜尋</string>
     <string name="Sort_Item_post_num_c">每週有31則貼文</string>
     <string name="Sort_Item_subtitle_c">本版提供各式球類技巧討論、經驗分享或球類運動傷害， 都可在此發文討論～</string>
+    <string name="Sort_item_Hot_c">熱門</string>
+    <string name="Sort_Item_New_c">最新</string>
 
 
 </resources>

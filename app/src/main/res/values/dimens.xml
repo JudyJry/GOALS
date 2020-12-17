@@ -15,4 +15,5 @@
     <dimen name="margin_goal_new_button">25dp</dimen>
     <dimen name="height_search_bar">45dp</dimen>
     <dimen name="margin_act_16dp">16dp</dimen>
+    <dimen name="margin_post_9dp">9dp</dimen>
 </resources>

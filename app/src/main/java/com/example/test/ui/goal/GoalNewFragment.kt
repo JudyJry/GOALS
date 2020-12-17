@@ -92,7 +92,8 @@ class GoalNewFragment : Fragment() {
         val dpd = DatePickerDialog(
             root.context,
             { _, Year, Month, Day ->
-                val dateTime = "$Year/$Month/$Day"
+                val m = Month.plus(1)
+                val dateTime = "$Year/$m/$Day"
                 startDate.text = dateTime
             }, year, month, day
         )
@@ -110,7 +111,8 @@ class GoalNewFragment : Fragment() {
         val dpd = DatePickerDialog(
             root.context,
             { _, Year, Month, Day ->
-                val dateTime = "$Year/$Month/$Day"
+                val m = Month.plus(1)
+                val dateTime = "$Year/$m/$Day"
                 endDate.text = dateTime
             }, year, month, day
         )

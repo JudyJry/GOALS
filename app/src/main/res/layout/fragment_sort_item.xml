@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".SortItemFragment">
+    tools:context=".SortItemFragment"
+    android:animateLayoutChanges="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -90,16 +92,57 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/sort_label_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_below="@+id/sort_item_subtitle"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="@dimen/margin_goal_10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="5dp"
-            android:layout_marginBottom="5dp"
-            tools:listitem="@layout/item_sort_label"/>
+            android:layout_marginBottom="0dp"
+            tools:listitem="@layout/item_sort_label"
+            />
+        <View
+            android:id="@+id/sort_item_space"
+            android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:layout_below="@+id/sort_label_list"
+            android:background="@drawable/sort_label_bg"/>
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/sort_item_tab"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/sort_item_space"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-5dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginBottom="8dp"
+            app:tabIndicatorColor="@color/deep_purple"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="@color/deep_purple"
+            app:tabTextColor="@color/light_purple"
+            app:tabTextAppearance="@style/Sort_Item_Tab"
+            >
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Sort_item_Hot_c" />
 
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Sort_Item_New_c" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/sort_item_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sort_item_tab"
+            android:orientation="horizontal"/>
     </RelativeLayout>
 </ScrollView>
