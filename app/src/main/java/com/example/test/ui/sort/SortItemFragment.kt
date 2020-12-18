@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageButton
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -31,6 +32,9 @@ class SortItemFragment(private var itemPos: Int) : Fragment() {
         val tabItem = arrayListOf(R.string.Sort_item_Hot_c, R.string.Sort_Item_New_c)
         val viewPager: ViewPager2 = root.findViewById(R.id.sort_item_viewPager)
         val tri: ImageButton = root.findViewById(R.id.sort_item_tri)
+
+        shortAnimationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
+
         labelList.layoutManager =
             LinearLayoutManager(root.context, LinearLayoutManager.HORIZONTAL, false)
         @Suppress("UNCHECKED_CAST")
@@ -41,7 +45,6 @@ class SortItemFragment(private var itemPos: Int) : Fragment() {
             tab.setText(tabItem[position])
         }.attach()
 
-        shortAnimationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
 
         tri.setOnClickListener {
             if (labelList.layoutParams.height == 0) {

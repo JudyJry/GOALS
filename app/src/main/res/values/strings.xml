@@ -35,13 +35,6 @@
     <string name="Setting_Private_c">隱私</string>
     <string name="Setting_Notification_c">提醒</string>
 
-    <string name="Sort_c">有興趣的運動</string>
-    <string name="Sort_Ball_c">球類</string>
-    <string name="Sort_Aerobic_c">有氧</string>
-    <string name="Sort_Outdoor_c">室外</string>
-    <string name="Sort_Indoor_c">室內</string>
-    <string name="Sort_Water_c">水上</string>
-
     <string name="Act_join_c">報名</string>
     <string name="Act_joined_c">已報名</string>
     <string name="Act_cancel_c">取消報名</string>
@@ -75,6 +68,7 @@
     <string name="Goal_Item_Time_1">2020/10/01~2020/10/31</string>
     <string name="Goal_Item_Location">地點</string>
     <string name="n_a">N/A</string>
+
     <string name="Goal_cancel_c">取消參加</string>
     <string name="Goal_new_item">新增目標</string>
     <string name="Goal_new_item_c">新增</string>
@@ -88,10 +82,23 @@
     <string name="Goal_new_img_c">選擇照片</string>
     <string name="Goal_new_img_text_c">尚未選擇照片</string>
     <string name="Goal_search_c">搜尋</string>
+
+    <string name="Sort_c">有興趣的運動</string>
+    <string name="Sort_Ball_c">球類</string>
+    <string name="Sort_Aerobic_c">有氧</string>
+    <string name="Sort_Outdoor_c">室外</string>
+    <string name="Sort_Indoor_c">室內</string>
+    <string name="Sort_Water_c">水上</string>
+
     <string name="Sort_Item_post_num_c">每週有31則貼文</string>
     <string name="Sort_Item_subtitle_c">本版提供各式球類技巧討論、經驗分享或球類運動傷害， 都可在此發文討論～</string>
     <string name="Sort_item_Hot_c">熱門</string>
     <string name="Sort_Item_New_c">最新</string>
+
+    <string name="Post_More_c">更多</string>
+    <string name="Post_Heart_c">喜歡</string>
+    <string name="Post_Reply_c">回應</string>
+    <string name="Post_Save_c">收藏</string>
 
 
 </resources>
