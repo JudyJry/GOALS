@@ -25,9 +25,9 @@ class LoginUser : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         this.window.statusBarColor = ContextCompat.getColor(this, R.color.white)
         this.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        val loginButton : Button = findViewById(R.id.Login_button)
-        val googleButton : Button = findViewById(R.id.Google_button)
-        val signUpButton : TextView = findViewById(R.id.Sign_up)
+        val loginButton : Button = findViewById(R.id.login_button)
+        val googleButton : Button = findViewById(R.id.login_Google_button)
+        val signUpButton : TextView = findViewById(R.id.login_Sign_up)
         loginButton.setOnClickListener(loginUser)
         googleButton.setOnClickListener(loginSuccess)
         signUpButton.setOnClickListener(loginSuccess)
@@ -36,8 +36,8 @@ class LoginUser : AppCompatActivity() {
 
 
     private fun loginVal() {
-        edId = findViewById(R.id.editTextUsername)
-        edPassword = findViewById(R.id.editTextPassword)
+        edId = findViewById(R.id.login_Username)
+        edPassword = findViewById(R.id.login_Password)
     }
 
     private val loginUser = View.OnClickListener{

@@ -1,170 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/margin_goal_10dp"
-    android:background="@drawable/shape_goal_item_bg_5r"
     tools:context=".GoalItemFragment">
 
-    <TextView
-        android:id="@+id/goal_item_title"
-        style="@style/Goal_Title.item"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="@dimen/margin_goal_15dp"
-        android:layout_marginTop="@dimen/margin_goal_15dp"
-        android:maxHeight="55dp"
-        android:text="@string/Goal_Item_Title_1" />
-
-    <Button
-        android:id="@+id/goal_join_button"
-        style="@style/Orange_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="@dimen/margin_goal_10dp"
-        android:layout_marginEnd="@dimen/margin_goal_15dp"
-        android:text="@string/Goal_join_c"
-        tools:ignore="RelativeOverlap" />
-
-    <ImageView
-        android:id="@+id/goal_time_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/goal_item_title"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="@dimen/margin_goal_15dp"
-        android:layout_marginTop="@dimen/margin_goal_10dp"
-        android:contentDescription="@string/Act_Item_Time"
-        app:srcCompat="@drawable/ic_time" />
-
-    <TextView
-        android:id="@+id/goal_item_time"
-        style="@style/Goal_Context.item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/goal_item_title"
-        android:layout_marginStart="@dimen/margin_goal_10dp"
-        android:layout_marginTop="@dimen/margin_goal_10dp"
-        android:layout_toEndOf="@+id/goal_time_img"
-        android:text="@string/Goal_Item_Time_1" />
-
-    <TextView
-        android:id="@+id/goal_item_author"
-        style="@style/Goal_Context.item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/goal_item_time"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="@dimen/margin_goal_15dp"
-        android:layout_marginTop="@dimen/margin_goal_10dp"
-        android:text="@string/Goal_Item_author_c" />
-
-    <ImageView
-        android:id="@+id/goal_item_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/goal_join_button"
-        android:layout_alignStart="@+id/goal_join_button"
-        android:layout_alignEnd="@+id/goal_join_button"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:contentDescription="@string/Goal_Item_author_c"
-        app:srcCompat="@drawable/goal_user_icon_1" />
-
-    <ImageView
-        android:id="@+id/Goal_member_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/goal_item_author"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="@dimen/margin_goal_15dp"
-        android:layout_marginTop="@dimen/margin_goal_10dp"
-        android:contentDescription="@string/Goal_Item_member_c"
-        app:srcCompat="@drawable/ic_join" />
-
-    <TextView
-        android:id="@+id/goal_item_member"
-        style="@style/Goal_Member"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/goal_item_author"
-        android:layout_marginStart="@dimen/margin_goal_10dp"
-        android:layout_marginTop="@dimen/margin_goal_10dp"
-        android:layout_toEndOf="@+id/Goal_member_icon"
-        android:text="@string/n_a" />
-
-    <TextView
-        android:id="@+id/goal_item_context"
-        style="@style/Goal_Context.item"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/goal_item_member"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="@dimen/margin_goal_15dp"
-        android:layout_marginTop="@dimen/margin_goal_10dp"
-        android:layout_marginEnd="@dimen/margin_goal_15dp"
-        android:text="@string/Goal_Item_Subtitle_1" />
+        android:layout_margin="@dimen/margin_goal_10dp"
+        android:background="@drawable/shape_goal_item_bg_5r">
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/goal_item_context"
-        android:layout_margin="@dimen/margin_goal_15dp"
-        android:background="@color/dark_orange" />
+        <TextView
+            android:id="@+id/goal_item_title"
+            style="@style/Goal_Title.item"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_goal_15dp"
+            android:layout_marginTop="@dimen/margin_goal_15dp"
+            android:maxHeight="55dp"
+            android:text="@string/Goal_Item_Title_1" />
 
-    <TextView
-        android:id="@+id/goal_item_location_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/divider"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="@dimen/margin_goal_15dp"
-        android:layout_marginTop="-5dp"
-        android:text="@string/Goal_Item_Location"
-        android:textColor="@color/deep_purple"
-        android:textSize="@dimen/size_text_20sp" />
+        <Button
+            android:id="@+id/goal_join_button"
+            style="@style/Orange_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:layout_marginEnd="@dimen/margin_goal_15dp"
+            android:text="@string/Goal_join_c"
+            tools:ignore="RelativeOverlap" />
 
-    <TextView
-        android:id="@+id/goal_item_location"
-        style="@style/Goal_Context.item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/goal_item_location_title"
-        android:layout_alignBottom="@+id/goal_item_location_title"
-        android:layout_marginStart="@dimen/margin_goal_15dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_toEndOf="@+id/goal_item_location_title"
-        android:gravity="center_vertical"
-        android:text="@string/Goal_Item_Location" />
+        <ImageView
+            android:id="@+id/goal_time_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goal_item_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_goal_15dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:contentDescription="@string/Act_Item_Time"
+            app:srcCompat="@drawable/ic_time" />
 
-    <ImageView
-        android:id="@+id/goal_item_location_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/goal_item_location"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="@dimen/margin_goal_10dp"
-        android:layout_marginTop="@dimen/margin_goal_10dp"
-        android:layout_marginEnd="@dimen/margin_goal_10dp"
-        android:layout_marginBottom="@dimen/margin_goal_10dp"
-        android:contentDescription="@string/Goal_Item_Location"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:padding="1dp"
-        android:background="@color/deep_purple"
-        app:srcCompat="@drawable/goal_location_1" />
+        <TextView
+            android:id="@+id/goal_item_time"
+            style="@style/Goal_Context.item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goal_item_title"
+            android:layout_marginStart="@dimen/margin_goal_10dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:layout_toEndOf="@+id/goal_time_img"
+            android:text="@string/Goal_Item_Time_1" />
+
+        <TextView
+            android:id="@+id/goal_item_author"
+            style="@style/Goal_Context.item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goal_item_time"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_goal_15dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:text="@string/Goal_Item_author_c" />
+
+        <ImageView
+            android:id="@+id/goal_item_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goal_join_button"
+            android:layout_alignStart="@+id/goal_join_button"
+            android:layout_alignEnd="@+id/goal_join_button"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/Goal_Item_author_c"
+            app:srcCompat="@drawable/goal_user_icon_1" />
+
+        <ImageView
+            android:id="@+id/Goal_member_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goal_item_author"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_goal_15dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:contentDescription="@string/Goal_Item_member_c"
+            app:srcCompat="@drawable/ic_join" />
+
+        <TextView
+            android:id="@+id/goal_item_member"
+            style="@style/Goal_Member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goal_item_author"
+            android:layout_marginStart="@dimen/margin_goal_10dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:layout_toEndOf="@+id/Goal_member_icon"
+            android:text="@string/n_a" />
+
+        <TextView
+            android:id="@+id/goal_item_context"
+            style="@style/Goal_Context.item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goal_item_member"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_goal_15dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:layout_marginEnd="@dimen/margin_goal_15dp"
+            android:text="@string/Goal_Item_Subtitle_1" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/goal_item_context"
+            android:layout_margin="@dimen/margin_goal_15dp"
+            android:background="@color/dark_orange" />
+
+        <TextView
+            android:id="@+id/goal_item_location_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_goal_15dp"
+            android:layout_marginTop="-5dp"
+            android:text="@string/Goal_Item_Location"
+            android:textColor="@color/deep_purple"
+            android:textSize="@dimen/size_text_20sp" />
+
+        <TextView
+            android:id="@+id/goal_item_location"
+            style="@style/Goal_Context.item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/goal_item_location_title"
+            android:layout_alignBottom="@+id/goal_item_location_title"
+            android:layout_marginStart="@dimen/margin_goal_15dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/goal_item_location_title"
+            android:gravity="center_vertical"
+            android:text="@string/Goal_Item_Location" />
+
+        <ImageView
+            android:id="@+id/goal_item_location_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goal_item_location"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_goal_10dp"
+            android:layout_marginTop="@dimen/margin_goal_10dp"
+            android:layout_marginEnd="@dimen/margin_goal_10dp"
+            android:layout_marginBottom="@dimen/margin_goal_10dp"
+            android:background="@color/deep_purple"
+            android:contentDescription="@string/Goal_Item_Location"
+            android:cropToPadding="true"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/goal_location_1" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
+

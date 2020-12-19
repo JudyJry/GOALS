@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="banner_margin">10dp</dimen>
+    <!--padding-->
     <dimen name="design_navigation_separator_vertical_padding">0dp</dimen>
-    <dimen name="height_bar">60dp</dimen>
-    <dimen name="size_icon">60dp</dimen>
-    <dimen name="size_text_20sp">20sp</dimen>
+    <!--margin-->
+    <dimen name="margin_banner">10dp</dimen>
     <dimen name="margin_sort_list">20dp</dimen>
-    <dimen name="elevation_bar">5dp</dimen>
-    <dimen name="elevation_page">0dp</dimen>
-    <dimen name="banner_height">207dp</dimen>
-    <dimen name="width_act_item_context">280dp</dimen>
     <dimen name="margin_goal_15dp">15dp</dimen>
     <dimen name="margin_goal_10dp">10dp</dimen>
     <dimen name="margin_goal_new_button">25dp</dimen>
-    <dimen name="height_search_bar">45dp</dimen>
     <dimen name="margin_act_16dp">16dp</dimen>
     <dimen name="margin_post_9dp">9dp</dimen>
-    <dimen name="size_post_icon">24dp</dimen>
     <dimen name="margin_post_5dp">5dp</dimen>
+    <dimen name="margin_login_24dp">24dp</dimen>
+    <!--size-->
+    <dimen name="size_icon">60dp</dimen>
+    <dimen name="size_text_20sp">20sp</dimen>
+    <dimen name="size_post_icon">24dp</dimen>
+    <!--width-->
+    <dimen name="width_act_item_context">280dp</dimen>
+    <!--height-->
+    <dimen name="height_bar">60dp</dimen>
+    <dimen name="height_search_bar">45dp</dimen>
+    <!--elevation-->
+    <dimen name="elevation_bar">5dp</dimen>
+    <dimen name="elevation_page">0dp</dimen>
+
 </resources>

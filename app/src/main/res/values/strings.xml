@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">GOALS</string>
+    <!--login-->
     <string name="Login">Login</string>
     <string name="Login_Logo">Logo</string>
     <string name="Login_ID">ID</string>
     <string name="Login_Password">Password</string>
     <string name="Login_google">Google</string>
     <string name="Login_sign_up">Sign Up</string>
-
+    <!--main-->
     <string name="Main_Home">Home</string>
     <string name="Main_Home_c">首頁</string>
     <string name="Main_Goal">Goal</string>
@@ -17,24 +18,36 @@
     <string name="Main_Act_c">活動</string>
     <string name="Main_User">User</string>
     <string name="Main_User_c">個人頁面</string>
-
-    <string name="icon_list">List</string>
-
     <string name="Main_Title_1">活動資訊</string>
-    <string name="content">Content</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Main_Title_2">目標</string>
-    <string name="banner">banner</string>
-
     <string name="Main_Setting_c">設定</string>
     <string name="Main_Nav_Sort_c">分類版面</string>
     <string name="Main_Logout_c">登出</string>
-
-    <string name="Setting_Person_c">個人設定</string>
-    <string name="Setting_Friend_c">好友設定</string>
-    <string name="Setting_Private_c">隱私</string>
-    <string name="Setting_Notification_c">提醒</string>
-
+    <!--goal-->
+    <string name="Goal_join_c">加入</string>
+    <string name="Goal_Item_member_c">參加人數</string>
+    <string name="Goal_Item_author_c">發起人</string>
+    <string name="Goal_joined_c">已加入</string>
+    <string name="Goal_Item_Title_1">每天跑10KM</string>
+    <string name="Goal_Item_Subtitle_1">大家一起每天跑10KM</string>
+    <string name="Goal_Item_Time_1">2020/10/01~2020/10/31</string>
+    <string name="Goal_Item_Location">地點</string>
+    <string name="n_a">N/A</string>
+    <!--goal_new-->
+    <string name="Goal_cancel_c">取消參加</string>
+    <string name="Goal_new_item">新增目標</string>
+    <string name="Goal_new_item_c">新增</string>
+    <string name="Goal_new_title_c">請輸入標題</string>
+    <string name="Goal_new_subtitle_c">請輸入副標題</string>
+    <string name="Goal_new_start_date_c">開始日期</string>
+    <string name="Goal_new_end_date_c">結束日期</string>
+    <string name="Goal_new_context_c">請輸入說明內容</string>
+    <string name="Goal_new_location_c">請輸入地點</string>
+    <string name="Goal_new_max_member_c">請輸入最大人數</string>
+    <string name="Goal_new_img_c">選擇照片</string>
+    <string name="Goal_new_img_text_c">尚未選擇照片</string>
+    <string name="Goal_search_c">搜尋</string>
+    <!--act-->
     <string name="Act_join_c">報名</string>
     <string name="Act_joined_c">已報名</string>
     <string name="Act_cancel_c">取消報名</string>
@@ -58,47 +71,33 @@
     <string name="Act_Item_Count_1">此活動只有一個場次時間</string>
     <string name="Act_Item_Count_2">此活動只有一個場次時間</string>
     <string name="Act_Item_Count_3">此活動只有一個場次時間</string>
-
-    <string name="Goal_join_c">加入</string>
-    <string name="Goal_Item_member_c">參加人數</string>
-    <string name="Goal_Item_author_c">發起人</string>
-    <string name="Goal_joined_c">已加入</string>
-    <string name="Goal_Item_Title_1">每天跑10KM</string>
-    <string name="Goal_Item_Subtitle_1">大家一起每天跑10KM</string>
-    <string name="Goal_Item_Time_1">2020/10/01~2020/10/31</string>
-    <string name="Goal_Item_Location">地點</string>
-    <string name="n_a">N/A</string>
-
-    <string name="Goal_cancel_c">取消參加</string>
-    <string name="Goal_new_item">新增目標</string>
-    <string name="Goal_new_item_c">新增</string>
-    <string name="Goal_new_title_c">請輸入標題</string>
-    <string name="Goal_new_subtitle_c">請輸入副標題</string>
-    <string name="Goal_new_start_date_c">開始日期</string>
-    <string name="Goal_new_end_date_c">結束日期</string>
-    <string name="Goal_new_context_c">請輸入說明內容</string>
-    <string name="Goal_new_location_c">請輸入地點</string>
-    <string name="Goal_new_max_member_c">請輸入最大人數</string>
-    <string name="Goal_new_img_c">選擇照片</string>
-    <string name="Goal_new_img_text_c">尚未選擇照片</string>
-    <string name="Goal_search_c">搜尋</string>
-
+    <!--user-->
+    <string name="User_Friend_c">好友</string>
+    <!--sort-->
     <string name="Sort_c">有興趣的運動</string>
     <string name="Sort_Ball_c">球類</string>
     <string name="Sort_Aerobic_c">有氧</string>
     <string name="Sort_Outdoor_c">室外</string>
     <string name="Sort_Indoor_c">室內</string>
     <string name="Sort_Water_c">水上</string>
-
+    <!--sort_item-->
     <string name="Sort_Item_post_num_c">每週有31則貼文</string>
     <string name="Sort_Item_subtitle_c">本版提供各式球類技巧討論、經驗分享或球類運動傷害， 都可在此發文討論～</string>
     <string name="Sort_item_Hot_c">熱門</string>
     <string name="Sort_Item_New_c">最新</string>
-
+    <!--post-->
     <string name="Post_More_c">更多</string>
     <string name="Post_Heart_c">喜歡</string>
     <string name="Post_Reply_c">回應</string>
     <string name="Post_Save_c">收藏</string>
-
+    <!--other-->
+    <string name="icon_list">List</string>
+    <string name="content">Content</string>
+    <string name="banner">banner</string>
+    <!--setting-->
+    <string name="Setting_Person_c">個人設定</string>
+    <string name="Setting_Friend_c">好友設定</string>
+    <string name="Setting_Private_c">隱私</string>
+    <string name="Setting_Notification_c">提醒</string>
 
 </resources>
