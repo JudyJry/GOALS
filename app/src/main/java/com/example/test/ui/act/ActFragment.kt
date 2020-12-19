@@ -22,7 +22,7 @@ class ActFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_act, container, false)
         list = root.findViewById(R.id.act_list)
         list.layoutManager = LinearLayoutManager(this.context)
-        list.adapter = ActListView(root.context, ActItem.List)
+        list.adapter = ActListView(root.context, ActItem.item)
         list.addOnItemTouchListener(
             RecyclerItemClickListener(
                 root.context, list, object : RecyclerItemClickListener.OnItemClickListener {

@@ -34,7 +34,11 @@ class HomeFragment : Fragment() {
 
         val banner = root.findViewById<ViewPager2>(R.id.banner)
         val homeBannerAdapter = HomeBannerAdapter()
-        homeBannerAdapter.setList(ActItem.List)
+        homeBannerAdapter.setList(arrayListOf(
+            ActItem.item[0]["image"] as Int,
+            ActItem.item[1]["image"] as Int,
+            ActItem.item[2]["image"] as Int,
+        ))
         banner.adapter = homeBannerAdapter
         banner.setOnClickListener {
             val intent =

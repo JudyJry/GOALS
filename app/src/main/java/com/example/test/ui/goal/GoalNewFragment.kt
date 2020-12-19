@@ -150,7 +150,8 @@ class GoalNewFragment : Fragment() {
         val date = "$sd~$ed"
         val user = "USER"
         GoalItem.joined.add(true)
-        GoalItem.g.add(
+        GoalItem.created.add(true)
+        GoalItem.item.add(
             mutableMapOf(
                 "author" to user,
                 "context" to context.text.toString(),

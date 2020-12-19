@@ -12,13 +12,21 @@ object GoalItem : ArrayList<Int>() {
 
     val joined: MutableList<Boolean> = arrayListOf(
         false,
+        true,
         false,
         false,
-        false,
-        false
+        true
     )
 
-    val g = mutableListOf(
+    val created: MutableList<Boolean> = arrayListOf(
+        false,
+        false,
+        false,
+        false,
+        true
+    )
+
+    val item = mutableListOf(
         mutableMapOf<String, Any>(
             "author" to "偉米",
             "context" to "我10/1號起將在大佳河濱公園舉辦大家一起路跑10km的活動，為期一個月的時間，我們的活動終指是想要大家一起堅持、團結，最後完成目標。\n" +

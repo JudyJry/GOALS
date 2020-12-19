@@ -34,11 +34,11 @@ class GoalListView(val context: Context?,
         private val time: TextView = itemView.findViewById(R.id.Goal_Time)
         private val member: TextView = itemView.findViewById(R.id.Goal_member)
         fun bindData(p: Int) {
-            val g = GoalItem.g[p]
+            val g = GoalItem.item[p]
             val mem = g["member"].toString()+"/"+g["maxMember"].toString()
-            title.text = g["title"] as CharSequence
-            subtitle.text = g["subtitle"] as CharSequence
-            time.text = g["time"] as CharSequence
+            title.text = g["title"] as String
+            subtitle.text = g["subtitle"] as String
+            time.text = g["time"] as String
             member.text = mem
 
             if (GoalItem.joined[p]) {

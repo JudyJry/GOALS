@@ -65,7 +65,7 @@ class GoalItemFragment(private var itemPos: Int) : Fragment() {
         val at: TextView = a.findViewById(R.id.act_alert_text)
         at.text = "參加成功"
         GoalItem.joined[itemPos] = true
-        val g = GoalItem.g[itemPos]
+        val g = GoalItem.item[itemPos]
         var m : Int = g["member"] as Int
         m += 1
         g["member"] = m
@@ -96,7 +96,7 @@ class GoalItemFragment(private var itemPos: Int) : Fragment() {
         val at: TextView = a.findViewById(R.id.act_alert_text)
         at.text = "取消成功"
         GoalItem.joined[itemPos] = false
-        val g = GoalItem.g[itemPos]
+        val g = GoalItem.item[itemPos]
         var m : Int = g["member"] as Int
         m += -1
         g["member"] = m

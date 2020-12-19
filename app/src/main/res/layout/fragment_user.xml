@@ -6,33 +6,86 @@
     android:background="@drawable/gradient_background"
     tools:context=".ui.user.UserFragment">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/user_image"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/user_info"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:contentDescription="@string/Main_User"
-            android:src="@drawable/user_user_icon" />
-
-        <TextView
-            android:id="@+id/user_name"
-            style="@style/User_Name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
             android:gravity="center"
-            android:text="@string/Main_User" />
+            android:orientation="vertical">
 
-        <Button
-            style="@style/Cyan_Button"
-            android:layout_width="140dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="14dp"
-            android:text="@string/User_Friend_c" />
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/Main_User"
+                android:src="@drawable/user_user_icon" />
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/User_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/Main_User" />
+
+            <Button
+                android:id="@+id/user_friend_button"
+                style="@style/Cyan_Button"
+                android:layout_width="140dp"
+                android:layout_height="@dimen/height_user_button_36dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/User_Friend_c" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_tab_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/user_info"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_goal_15dp"
+            android:orientation="vertical"
+            android:background="@color/white_alpha">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/user_tab_item_list"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="@dimen/margin_post_5dp"
+                android:layout_marginEnd="@dimen/margin_post_5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_user" />
+
+            <TextView
+                android:id="@+id/user_noItem_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/User_noItem_c"
+                android:textSize="@dimen/size_text_20sp"
+                android:textColor="@color/deep_purple"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/user_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_info"
+            android:layout_marginTop="@dimen/margin_user_tab_height"
+            tools:listitem="@layout/item_user_tab" />
+    </RelativeLayout>
 </ScrollView>

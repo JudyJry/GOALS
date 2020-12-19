@@ -12,7 +12,7 @@ import com.example.test.R
 
 
 class ActListView(
-    val context: Context?, val item: MutableList<Int>
+    val context: Context?, val item: MutableList<MutableMap<String, Any>>
 ) : RecyclerView.Adapter<ActListView.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val itemView =
@@ -21,7 +21,7 @@ class ActListView(
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder.bindData(item[position],position)
+        holder.bindData(item[position]["image"] as Int,position)
     }
 
     override fun getItemCount(): Int {

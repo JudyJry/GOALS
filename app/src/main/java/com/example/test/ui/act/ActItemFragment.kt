@@ -22,6 +22,7 @@ class ActItemFragment(private var itemPos:Int) : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        ActItem.setItemPos(itemPos)
         actViewModel = ViewModelProvider(this).get(ActViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_act_item, container, false)
         val img :ImageView= root.findViewById(R.id.act_item_imageView)
@@ -34,25 +35,25 @@ class ActItemFragment(private var itemPos:Int) : Fragment() {
         joinBtn.setOnClickListener(joinOnClick)
 
         actViewModel.mImg.observe(viewLifecycleOwner, {
-            img.setImageResource(it[itemPos])
+            img.setImageResource(it)
         })
         actViewModel.mTitle.observe(viewLifecycleOwner, {
-            title.text = resources.getString(it[itemPos])
+            title.text = it
         })
         actViewModel.mTime.observe(viewLifecycleOwner, {
-            time.text = resources.getString(it[itemPos])
+            time.text = it
         })
         actViewModel.mLocation.observe(viewLifecycleOwner, {
-            location.text = resources.getString(it[itemPos])
+            location.text = it
         })
         actViewModel.mCost.observe(viewLifecycleOwner, {
-            cost.text = resources.getString(it[itemPos])
+            cost.text = it
         })
         actViewModel.mCount.observe(viewLifecycleOwner, {
-            count.text = resources.getString(it[itemPos])
+            count.text = it
         })
         actViewModel.mJoined.observe(viewLifecycleOwner, {
-            if (it[itemPos]){joined()}
+            if (it){joined()}
         })
 
         return root

@@ -29,8 +29,12 @@ class LoginUser : AppCompatActivity() {
         val googleButton : Button = findViewById(R.id.login_Google_button)
         val signUpButton : TextView = findViewById(R.id.login_Sign_up)
         loginButton.setOnClickListener(loginUser)
-        googleButton.setOnClickListener(loginSuccess)
-        signUpButton.setOnClickListener(loginSuccess)
+        googleButton.setOnClickListener {
+            loginSuccess
+            UserInfo.setUser("USER") }
+        signUpButton.setOnClickListener{
+            loginSuccess
+            UserInfo.setUser("USER") }
         loginVal()
     }
 
@@ -43,7 +47,8 @@ class LoginUser : AppCompatActivity() {
     private val loginUser = View.OnClickListener{
         val id = edId.text.toString()
         val password = edPassword.text.toString()
-        if (id == "USER" && password == "user") {
+        UserInfo.setUser(id)
+        if (password == UserInfo.users[UserInfo.getUser()]?.get("password")) {
             toast("登入成功")
             startActivity<MainActivity>()
             this.finish()

@@ -12,6 +12,7 @@
     <dimen name="margin_post_9dp">9dp</dimen>
     <dimen name="margin_post_5dp">5dp</dimen>
     <dimen name="margin_login_24dp">24dp</dimen>
+    <dimen name="margin_user_tab_height">-36dp</dimen>
     <!--size-->
     <dimen name="size_icon">60dp</dimen>
     <dimen name="size_text_20sp">20sp</dimen>
@@ -21,6 +22,7 @@
     <!--height-->
     <dimen name="height_bar">60dp</dimen>
     <dimen name="height_search_bar">45dp</dimen>
+    <dimen name="height_user_button_36dp">36dp</dimen>
     <!--elevation-->
     <dimen name="elevation_bar">5dp</dimen>
     <dimen name="elevation_page">0dp</dimen>
