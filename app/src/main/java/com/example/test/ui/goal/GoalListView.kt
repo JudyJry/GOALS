@@ -27,6 +27,10 @@ class GoalListView(val context: Context?,
         return item.count()
     }
 
+    fun update(){
+        notifyDataSetChanged()
+    }
+
     class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val joinBtn: Button = itemView.findViewById(R.id.goal_join_button)
         private val title: TextView = itemView.findViewById(R.id.Goal_Title)

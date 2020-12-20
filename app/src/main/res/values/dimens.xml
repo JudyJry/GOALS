@@ -17,6 +17,7 @@
     <dimen name="size_icon">60dp</dimen>
     <dimen name="size_text_20sp">20sp</dimen>
     <dimen name="size_post_icon">24dp</dimen>
+    <dimen name="size_user_icon_80dp">80dp</dimen>
     <!--width-->
     <dimen name="width_act_item_context">280dp</dimen>
     <!--height-->

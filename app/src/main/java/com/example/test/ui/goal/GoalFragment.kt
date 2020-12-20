@@ -21,17 +21,15 @@ class GoalFragment : Fragment() {
     private lateinit var fab: FloatingActionButton
     private lateinit var searchEdit: EditText
     private lateinit var searchButton: TextView
+    private lateinit var listAdapter: GoalListView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_goal, container, false)
-        list = root.findViewById(R.id.Goal_list)
-        fab = root.findViewById(R.id.goal_new_button)
-        searchEdit = root.findViewById(R.id.search_edit_text)
-        searchButton = root.findViewById(R.id.search_text_button)
+        setVal(root)
         list.layoutManager = LinearLayoutManager(this.context)
-        list.adapter = GoalListView(root.context, GoalItem.item)
+        list.adapter = listAdapter
         list.addOnItemTouchListener(
             RecyclerItemClickListener(
                 root.context, list, object : RecyclerItemClickListener.OnItemClickListener {
@@ -53,5 +51,17 @@ class GoalFragment : Fragment() {
             startActivityForResult(intent, 0)
         }
         return root
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        listAdapter.update()
+    }
+
+    private fun setVal(root: View) {
+        list = root.findViewById(R.id.Goal_list)
+        fab = root.findViewById(R.id.goal_new_button)
+        searchEdit = root.findViewById(R.id.search_edit_text)
+        searchButton = root.findViewById(R.id.search_text_button)
+        listAdapter = GoalListView(root.context,GoalItem.item)
     }
 }

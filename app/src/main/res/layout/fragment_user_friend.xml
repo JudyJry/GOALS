@@ -34,10 +34,7 @@
                 android:layout_alignTop="@+id/friend_now_title"
                 android:layout_alignBottom="@+id/friend_now_title"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
                 android:layout_marginEnd="12dp"
-                android:layout_marginBottom="0dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="bottom"
@@ -51,6 +48,67 @@
                 android:layout_below="@+id/friend_now_title"
                 android:background="@color/deep_purple" />
 
+            <TableLayout
+                android:id="@+id/friend_now_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/friend_divider">
+
+                <TableRow android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/friend_now_1"
+                        android:layout_width="@dimen/size_user_icon_80dp"
+                        android:layout_height="@dimen/size_user_icon_80dp"
+                        android:layout_margin="@dimen/margin_goal_10dp"
+                        android:contentDescription="@string/User_Friend_c"
+                        android:src="@drawable/user_user_icon" />
+
+                    <ImageView
+                        android:id="@+id/friend_now_2"
+                        android:layout_width="@dimen/size_user_icon_80dp"
+                        android:layout_height="@dimen/size_user_icon_80dp"
+                        android:layout_margin="@dimen/margin_goal_10dp"
+                        android:contentDescription="@string/User_Friend_c"
+                        android:src="@drawable/user_user_icon" />
+
+                    <ImageView
+                        android:id="@+id/friend_now_3"
+                        android:layout_width="@dimen/size_user_icon_80dp"
+                        android:layout_height="@dimen/size_user_icon_80dp"
+                        android:layout_margin="@dimen/margin_goal_10dp"
+                        android:contentDescription="@string/User_Friend_c"
+                        android:src="@drawable/user_user_icon" />
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/friend_now_4"
+                        android:layout_width="@dimen/size_user_icon_80dp"
+                        android:layout_height="@dimen/size_user_icon_80dp"
+                        android:layout_margin="@dimen/margin_goal_10dp"
+                        android:contentDescription="@string/User_Friend_c"
+                        android:src="@drawable/user_user_icon" />
+
+                    <ImageView
+                        android:id="@+id/friend_now_5"
+                        android:layout_width="@dimen/size_user_icon_80dp"
+                        android:layout_height="@dimen/size_user_icon_80dp"
+                        android:layout_margin="@dimen/margin_goal_10dp"
+                        android:contentDescription="@string/User_Friend_c"
+                        android:src="@drawable/user_user_icon" />
+
+                    <ImageView
+                        android:id="@+id/friend_now_6"
+                        android:layout_width="@dimen/size_user_icon_80dp"
+                        android:layout_height="@dimen/size_user_icon_80dp"
+                        android:layout_margin="@dimen/margin_goal_10dp"
+                        android:contentDescription="@string/User_Friend_c"
+                        android:src="@drawable/user_user_icon" />
+                </TableRow>
+            </TableLayout>
         </RelativeLayout>
 
         <RelativeLayout
@@ -69,11 +127,17 @@
                 android:text="@string/User_Friend_Yet_c" />
 
             <View
-                android:id="@+id/friend_now_divider"
+                android:id="@+id/friend_yet_divider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_below="@+id/friend_yet_title"
                 android:background="@color/deep_purple" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/friend_yet_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/friend_yet_divider"
+                />
         </RelativeLayout>
     </RelativeLayout>
 

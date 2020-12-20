@@ -28,6 +28,10 @@ class ActListView(
         return item.count()
     }
 
+    fun update(){
+        notifyDataSetChanged()
+    }
+
     class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val itemImg : ImageView= itemView.findViewById(R.id.act_imageView)
         private val joinBtn : Button = itemView.findViewById(R.id.act_join_button)

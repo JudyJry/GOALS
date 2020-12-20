@@ -15,14 +15,15 @@ import com.example.test.RecyclerItemClickListener
 
 class ActFragment : Fragment() {
     private lateinit var list: RecyclerView
+    private lateinit var listAdapter : ActListView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_act, container, false)
-        list = root.findViewById(R.id.act_list)
+        setVal(root)
         list.layoutManager = LinearLayoutManager(this.context)
-        list.adapter = ActListView(root.context, ActItem.item)
+        list.adapter = listAdapter
         list.addOnItemTouchListener(
             RecyclerItemClickListener(
                 root.context, list, object : RecyclerItemClickListener.OnItemClickListener {
@@ -40,6 +41,15 @@ class ActFragment : Fragment() {
         )
 
         return root
+    }
+
+    private fun setVal(root: View) {
+        list = root.findViewById(R.id.act_list)
+        listAdapter = ActListView(root.context, ActItem.item)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        listAdapter.update()
     }
 
 }
