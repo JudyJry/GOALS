@@ -62,12 +62,13 @@
     <string name="Act_Item_Count_c">活動場次</string>
     <string name="Act_Item_Count_1">此活動只有一個場次時間</string>
     <!--user-->
-    <string name="User_Friend_c">好友</string>
     <string name="User_MyGoals_c">我的目標</string>
     <string name="User_MyGoals_Now_c">現在目標</string>
     <string name="User_MyActs_Will_c">將參加活動</string>
     <string name="User_MyGoals_Past_c">過去目標</string>
     <string name="User_MyActs_Past_c">過去活動</string>
+    <string name="User_Friend_c">好友</string>
+    <string name="User_Friend_Yet_c">可能認識的</string>
     <!--sort-->
     <string name="Sort_c">有興趣的運動</string>
     <string name="Sort_Ball_c">球類</string>

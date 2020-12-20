@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/gradient_background"
     tools:context=".ui.user.UserFragment">
 
@@ -48,16 +49,22 @@
                 android:text="@string/User_Friend_c" />
         </LinearLayout>
 
+        <Space
+            android:id="@+id/user_space"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_goal_15dp"
+            android:layout_below="@+id/user_info"/>
+
         <LinearLayout
             android:id="@+id/user_tab_item"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/user_info"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_space"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/margin_goal_15dp"
             android:orientation="vertical"
-            android:background="@color/white_alpha">
+            android:background="@color/white_alpha"
+            android:minHeight="750dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/user_tab_item_list"

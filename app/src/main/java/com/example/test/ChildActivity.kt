@@ -16,6 +16,7 @@ import com.example.test.ui.goal.GoalItemFragment
 import com.example.test.ui.goal.GoalNewFragment
 import com.example.test.ui.setting.SettingFragment
 import com.example.test.ui.sort.SortItemFragment
+import com.example.test.ui.user.UserFriendFragment
 
 class ChildActivity : AppCompatActivity() {
     lateinit var ctbTitle: TextView
@@ -44,22 +45,6 @@ class ChildActivity : AppCompatActivity() {
 
     private fun selectPage(): Boolean {
         when (intent.getStringExtra("PageName")) {
-            "Sort" -> {
-                ctbTitle.setText(R.string.Main_Sort_c)
-                changePage(R.id.child_nav_host_fragment, SettingFragment())
-                return true
-            }
-            "Setting" -> {
-                ctbTitle.setText(R.string.Main_Setting_c)
-                changePage(R.id.child_nav_host_fragment, SettingFragment())
-                return true
-            }
-            "Act_Item" -> {
-                ctbTitle.setText(R.string.Main_Act_c)
-                val pos: Int = intent.getIntExtra("ActInt", 0)
-                changePage(R.id.child_nav_host_fragment, ActItemFragment(pos))
-                return true
-            }
             "Goal_Item" -> {
                 ctbTitle.setText(R.string.Main_Goal_c)
                 val pos: Int = intent.getIntExtra("GoalInt", 0)
@@ -71,10 +56,31 @@ class ChildActivity : AppCompatActivity() {
                 changePage(R.id.child_nav_host_fragment, GoalNewFragment())
                 return true
             }
+            "Act_Item" -> {
+                ctbTitle.setText(R.string.Main_Act_c)
+                val pos: Int = intent.getIntExtra("ActInt", 0)
+                changePage(R.id.child_nav_host_fragment, ActItemFragment(pos))
+                return true
+            }
+            "User_Friend"->{
+                ctbTitle.setText(R.string.User_Friend_c)
+                changePage(R.id.child_nav_host_fragment, UserFriendFragment())
+                return true
+            }
+            "Sort" -> {
+                ctbTitle.setText(R.string.Main_Sort_c)
+                changePage(R.id.child_nav_host_fragment, SettingFragment())
+                return true
+            }
             "Sort_Item"->{
                 val pos: Int = intent.getIntExtra("SortInt", 0)
                 ctbTitle.setText(SortItem.s[pos]["title"] as Int)
                 changePage(R.id.child_nav_host_fragment, SortItemFragment(pos))
+                return true
+            }
+            "Setting" -> {
+                ctbTitle.setText(R.string.Main_Setting_c)
+                changePage(R.id.child_nav_host_fragment, SettingFragment())
                 return true
             }
             else -> {

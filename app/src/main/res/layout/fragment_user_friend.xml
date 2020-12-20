@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".UserFriendFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_goal_15dp"
+        android:layout_marginTop="@dimen/margin_goal_15dp">
+
+        <RelativeLayout
+            android:id="@+id/friend_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_goal_15dp"
+            android:background="@drawable/shape_goal_item_bg_5r">
+
+            <TextView
+                android:id="@+id/friend_now_title"
+                style="@style/User_Friend_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/User_Friend_c" />
+
+            <TextView
+                android:id="@+id/friend_now_more"
+                style="@style/User_Friend_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/friend_now_title"
+                android:layout_alignBottom="@+id/friend_now_title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="bottom"
+                android:text="@string/Post_More_c"
+                tools:ignore="RelativeOverlap" />
+
+            <View
+                android:id="@+id/friend_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/friend_now_title"
+                android:background="@color/deep_purple" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/friend_yet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/friend_now"
+            android:layout_marginBottom="@dimen/margin_goal_15dp"
+            android:background="@drawable/shape_goal_item_bg_5r">
+
+            <TextView
+                android:id="@+id/friend_yet_title"
+                style="@style/User_Friend_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/User_Friend_Yet_c" />
+
+            <View
+                android:id="@+id/friend_now_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/friend_yet_title"
+                android:background="@color/deep_purple" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
