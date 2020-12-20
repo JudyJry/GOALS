@@ -29,12 +29,8 @@ class LoginUser : AppCompatActivity() {
         val googleButton : Button = findViewById(R.id.login_Google_button)
         val signUpButton : TextView = findViewById(R.id.login_Sign_up)
         loginButton.setOnClickListener(loginUser)
-        googleButton.setOnClickListener {
-            loginSuccess
-            UserInfo.setUser("USER") }
-        signUpButton.setOnClickListener{
-            loginSuccess
-            UserInfo.setUser("USER") }
+        googleButton.setOnClickListener(loginSuccess)
+        signUpButton.setOnClickListener(loginSuccess)
         loginVal()
     }
 
@@ -62,6 +58,7 @@ class LoginUser : AppCompatActivity() {
 
 
     private val loginSuccess = View.OnClickListener{
+        UserInfo.setUser("USER")
         toast("登入成功")
         startActivity<MainActivity>()
         this.finish()

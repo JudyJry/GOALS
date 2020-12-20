@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.BaseAdapter
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -18,6 +19,7 @@ class UserFragment : Fragment() {
     private lateinit var userNameText: TextView
     private lateinit var list: ArrayList<Int>
     private lateinit var tabView: RecyclerView
+    private lateinit var tabViewAdapter: UserTabView
     private lateinit var itemList: RecyclerView
     private lateinit var itemAdapter: UserListView
     private lateinit var itemTextView: TextView
@@ -31,11 +33,12 @@ class UserFragment : Fragment() {
         setVal(root)
 
         tabView.layoutManager = LinearLayoutManager(root.context)
-        tabView.adapter = UserTabView(list)
         tabView.addOnItemTouchListener(tabOnClick(root.context))
+        tabView.adapter = tabViewAdapter
 
         itemList.layoutManager = LinearLayoutManager(root.context)
         itemList.adapter = itemAdapter
+        itemAdapter.items = changeList(GoalItem.created,GoalItem.item)
 
         itemListBg.layoutParams.height = 1891
 
@@ -47,13 +50,6 @@ class UserFragment : Fragment() {
     }
 
     private fun setVal(root: View){
-        itemList = root.findViewById(R.id.user_tab_item_list)
-        tabView = root.findViewById(R.id.user_tab)
-        itemTextView = root.findViewById(R.id.user_noItem_text)
-        itemListBg = root.findViewById(R.id.user_tab_item)
-        friendButton = root.findViewById(R.id.user_friend_button)
-        userNameText = root.findViewById(R.id.user_name)
-        itemAdapter = UserListView(null)
         list = arrayListOf(
             R.string.User_MyGoals_c,
             R.string.User_MyGoals_Now_c,
@@ -61,6 +57,15 @@ class UserFragment : Fragment() {
             R.string.User_MyGoals_Past_c,
             R.string.User_MyActs_Past_c
         )
+        itemList = root.findViewById(R.id.user_tab_item_list)
+        tabView = root.findViewById(R.id.user_tab)
+        itemTextView = root.findViewById(R.id.user_noItem_text)
+        itemListBg = root.findViewById(R.id.user_tab_item)
+        friendButton = root.findViewById(R.id.user_friend_button)
+        userNameText = root.findViewById(R.id.user_name)
+
+        itemAdapter = UserListView(null)
+        tabViewAdapter = UserTabView(list)
     }
 
     private fun setHeight(){
@@ -88,6 +93,7 @@ class UserFragment : Fragment() {
     private fun tabOnClick(context: Context) = RecyclerItemClickListener(
         context, tabView, object : RecyclerItemClickListener.OnItemClickListener {
             override fun onItemClick(view: View, position: Int) {
+                tabViewAdapter.statePos = position
                 when (position) {
                     0 -> {
                         itemAdapter.items = changeList(GoalItem.created,GoalItem.item)

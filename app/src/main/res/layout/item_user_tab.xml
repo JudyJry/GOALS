@@ -4,7 +4,7 @@
     android:layout_width="45dp"
     android:layout_height="wrap_content"
     android:background="@drawable/shape_user_tab"
-    android:backgroundTint="@color/light_cyan"
+    android:backgroundTint="@color/selector_user_tab"
     android:gravity="center">
 
     <TextView

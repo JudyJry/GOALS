@@ -15,12 +15,12 @@ object UserInfo : ArrayList<Int>(){
             "friendNum" to 3
         ),
         "whiteMagic" to mutableMapOf(
-            "name" to "User",
+            "name" to "白魔女",
             "password" to "wm133589",
             "friendNum" to 13
         ),
         "weme0110" to mutableMapOf(
-            "name" to "User",
+            "name" to "偉米",
             "password" to "0110WeMe",
             "friendNum" to 7
         )
