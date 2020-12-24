@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_back"
-            android:contentDescription="@string/icon_list" />
+            android:contentDescription="@string/Main_List" />
 
         <TextView
             android:id="@+id/child_toolbar_title"

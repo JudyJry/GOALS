@@ -11,6 +11,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.annotation.ContentView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
@@ -26,8 +27,12 @@ import com.google.android.material.navigation.NavigationView
 import org.jetbrains.anko.startActivity
 
 class MainActivity : AppCompatActivity() {
-    lateinit var tbtitle: TextView
+    private lateinit var tbtitle: TextView
+    private lateinit var listButton: ImageButton
+    private lateinit var checkButton: ImageButton
     private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navViewDrawer: NavigationView
+    private lateinit var navView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,24 +40,34 @@ class MainActivity : AppCompatActivity() {
         this.window.statusBarColor = ContextCompat.getColor(this, R.color.deep_cyan)
         this.window.decorView.systemUiVisibility = 0
 
-        setSupportActionBar(findViewById(R.id.Toolbar))
-        tbtitle = findViewById(R.id.toolbar_title)
+        setVal()
 
         drawerLayout = findViewById(R.id.drawer_layout)
-        val navViewDrawer: NavigationView = findViewById(R.id.nav_view)
         navViewDrawer.setNavigationItemSelectedListener(navigationListener)
-
-        val navView: BottomNavigationView = findViewById(R.id.footer)
         navView.setOnNavigationItemSelectedListener(bottomNavigationListener)
-
-        val listButton :ImageButton = findViewById(R.id.toolbar_list)
         listButton.setOnClickListener(listOnClick)
+        checkButton.setOnClickListener(checkOnClick)
 
+    }
+
+    private fun setVal() {
+        tbtitle = findViewById(R.id.toolbar_title)
+        listButton = findViewById(R.id.toolbar_list)
+        checkButton = findViewById(R.id.toolbar_check)
+        navViewDrawer = findViewById(R.id.nav_view)
+        navView = findViewById(R.id.footer)
     }
 
 
     private val listOnClick = View.OnClickListener {
         drawerLayout.openDrawer(GravityCompat.START)
+    }
+
+    private val checkOnClick = View.OnClickListener {
+        val intent =
+            Intent(this@MainActivity, ChildActivity::class.java)
+        intent.putExtra("PageName", "CheckIn")
+        startActivityForResult(intent, 0)
     }
 
     @Suppress("UNUSED_PARAMETER")

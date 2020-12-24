@@ -12,7 +12,6 @@
         android:elevation="@dimen/elevation_bar"
         app:itemIconSize="@dimen/size_icon"
         app:itemIconTint="@color/selector_nav"
-
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

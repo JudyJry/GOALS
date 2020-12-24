@@ -8,6 +8,9 @@
     <string name="Login_google">Google</string>
     <string name="Login_sign_up">Sign Up</string>
     <!--main-->
+    <string name="Main_List">List</string>
+    <string name="Main_CheckIn">CheckIn</string>
+    <string name="Main_CheckIn_c">打卡</string>
     <string name="Main_Home">Home</string>
     <string name="Main_Home_c">首頁</string>
     <string name="Main_Goal">Goal</string>
@@ -23,6 +26,9 @@
     <string name="Main_Setting_c">設定</string>
     <string name="Main_Nav_Sort_c">分類版面</string>
     <string name="Main_Logout_c">登出</string>
+    <!--home-->
+    <string name="Home_Banner">banner</string>
+    <string name="Home_Friend_c">好友動態</string>
     <!--goal-->
     <string name="Goal_join_c">加入</string>
     <string name="Goal_Item_member_c">參加人數</string>
@@ -62,12 +68,14 @@
     <string name="Act_Item_Count_c">活動場次</string>
     <string name="Act_Item_Count_1">此活動只有一個場次時間</string>
     <!--user-->
+    <string name="User_noItem_c">沒有紀錄喔~</string>
     <string name="User_MyGoals_c">我的目標</string>
     <string name="User_MyGoals_Now_c">現在目標</string>
     <string name="User_MyActs_Will_c">將參加活動</string>
     <string name="User_MyGoals_Past_c">過去目標</string>
     <string name="User_MyActs_Past_c">過去活動</string>
     <string name="User_Friend_c">好友</string>
+    <string name="User_Friend_plus_c">加好友</string>
     <string name="User_Friend_Yet_c">可能認識的</string>
     <!--sort-->
     <string name="Sort_c">有興趣的運動</string>
@@ -87,14 +95,11 @@
     <string name="Post_Reply_c">回應</string>
     <string name="Post_Save_c">收藏</string>
     <!--other-->
-    <string name="icon_list">List</string>
     <string name="content">Content</string>
-    <string name="banner">banner</string>
     <!--setting-->
     <string name="Setting_Person_c">個人設定</string>
     <string name="Setting_Friend_c">好友設定</string>
     <string name="Setting_Private_c">隱私</string>
     <string name="Setting_Notification_c">提醒</string>
-    <string name="User_noItem_c">沒有紀錄喔~</string>
 
 </resources>

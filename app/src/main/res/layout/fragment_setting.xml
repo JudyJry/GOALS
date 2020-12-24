@@ -8,6 +8,7 @@
     tools:context=".ui.setting.SettingFragment">
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/setting_nav"
         app:menu="@menu/setting_list"
         android:background="@drawable/gradient_background"
         android:layout_width="match_parent"

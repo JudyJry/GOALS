@@ -11,7 +11,7 @@ class HomeBannerAdapter : RecyclerView.Adapter<HomeBannerAdapter.PagerViewHolder
     private var mList: List<Int> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagerViewHolder {
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.banner_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_banner, parent, false)
         return PagerViewHolder(itemView)
     }
 

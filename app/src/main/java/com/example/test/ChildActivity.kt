@@ -45,6 +45,11 @@ class ChildActivity : AppCompatActivity() {
 
     private fun selectPage(): Boolean {
         when (intent.getStringExtra("PageName")) {
+            "CheckIn"->{
+                ctbTitle.setText(R.string.Main_CheckIn_c)
+                changePage(R.id.child_nav_host_fragment, CheckInFragment())
+                return true
+            }
             "Goal_Item" -> {
                 ctbTitle.setText(R.string.Main_Goal_c)
                 val pos: Int = intent.getIntExtra("GoalInt", 0)
