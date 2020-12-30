@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/check_location_label"
+    android:layout_width="wrap_content"
+    android:layout_height="25dp"
+    android:layout_marginStart="@dimen/margin_goal_10dp"
+    android:layout_marginEnd="@dimen/margin_goal_10dp"
+    android:background="@drawable/shape_white_button"
+    android:backgroundTint="@color/deep_cyan"
+    android:maxLength="7"
+    android:maxLines="1"
+    android:paddingHorizontal="10dp"
+    android:text="@string/Act_Item_Location_1"
+    android:textColor="@color/white"
+    android:textSize="14sp" />
