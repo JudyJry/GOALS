@@ -24,6 +24,7 @@ class LoginUser : AppCompatActivity() {
         actionBar?.hide()
         setContentView(R.layout.activity_login)
         this.window.statusBarColor = ContextCompat.getColor(this, R.color.white)
+        @Suppress("DEPRECATION")
         this.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         val loginButton : Button = findViewById(R.id.login_button)
         val googleButton : Button = findViewById(R.id.login_Google_button)
