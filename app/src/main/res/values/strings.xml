@@ -29,6 +29,11 @@
     <!--home-->
     <string name="Home_Banner">banner</string>
     <string name="Home_Friend_c">好友動態</string>
+    <!--check-->
+    <string name="Check_Goal_c">參加目標</string>
+    <string name="Check_Location_c">地點</string>
+    <string name="Check_Edit_c">請輸入內文</string>
+    <string name="Check_Share_c">分享</string>
     <!--goal-->
     <string name="Goal_join_c">加入</string>
     <string name="Goal_Item_member_c">參加人數</string>

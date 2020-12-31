@@ -5,7 +5,7 @@ import android.animation.ValueAnimator
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.LayoutInflater
@@ -16,7 +16,6 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.io.File
 
 class CheckInFragment : Fragment() {
     private var shortAnimationDuration: Int = 0
@@ -28,6 +27,7 @@ class CheckInFragment : Fragment() {
     private lateinit var locateTextView: TextView
     private lateinit var locateList: RecyclerView
     private lateinit var checkButton: Button
+    private lateinit var picture:ImageView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -64,13 +64,14 @@ class CheckInFragment : Fragment() {
         locateList = root.findViewById(R.id.check_list_location)
         shortAnimationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
         checkButton = root.findViewById(R.id.check_button)
+        picture = root.findViewById(R.id.check_pic)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 81 || resultCode == Activity.RESULT_OK){
-            val uri: Uri = data?.data!!.normalizeScheme()
-            val fileName = File(uri.path!!).name
+        if (requestCode == 81 && resultCode == Activity.RESULT_OK){
+            val imageBitmap = data!!.extras!!.get("data") as Bitmap
+            picture.setImageBitmap(imageBitmap)
         }
         else if (resultCode == Activity.RESULT_CANCELED){
             activity?.onBackPressed()

@@ -8,9 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.test.ActItem
-import com.example.test.MainActivity
 import com.example.test.R
-import com.example.test.ui.act.ActFragment
 import com.example.test.ui.user.UserFragment
 
 class HomeFragment : Fragment() {
@@ -44,6 +42,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun toPage(page : Fragment) = View.OnClickListener{
-        MainActivity().changePage(R.id.main_nav_host_fragment,page)
+        val transaction = activity?.supportFragmentManager!!.beginTransaction()
+        transaction.replace(R.id.main_nav_host_fragment, page)
+        transaction.disallowAddToBackStack()
+        transaction.commit()
     }
 }

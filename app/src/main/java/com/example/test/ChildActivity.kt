@@ -19,8 +19,8 @@ import com.example.test.ui.sort.SortItemFragment
 import com.example.test.ui.user.UserFriendFragment
 
 class ChildActivity : AppCompatActivity() {
-    lateinit var ctbTitle: TextView
-    lateinit var backButton: ImageButton
+    private lateinit var ctbTitle: TextView
+    private lateinit var backButton: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_child)

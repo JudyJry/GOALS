@@ -7,7 +7,7 @@ import com.example.test.GoalItem
 
 class GoalViewModel : ViewModel() {
     private val itemPos: Int = GoalItem.getItemPos()
-    val g = GoalItem.item[itemPos]
+    private val g = GoalItem.item[itemPos]
     private val title: String = g["title"] as String
     private val time: String = g["time"] as String
     private val author: String = g["author"] as String

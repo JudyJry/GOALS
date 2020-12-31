@@ -11,7 +11,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
-import androidx.annotation.ContentView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
@@ -38,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         this.window.statusBarColor = ContextCompat.getColor(this, R.color.deep_cyan)
+        @Suppress("DEPRECATION")
         this.window.decorView.systemUiVisibility = 0
 
         setVal()

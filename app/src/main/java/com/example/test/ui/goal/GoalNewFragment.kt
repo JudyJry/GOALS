@@ -74,7 +74,7 @@ class GoalNewFragment : Fragment() {
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 80 || resultCode == RESULT_OK){
+        if (requestCode == 80 && resultCode == RESULT_OK){
             val uri: Uri = data?.data!!.normalizeScheme()
             val fileName = File(uri.path!!).name
             imgText.text = fileName

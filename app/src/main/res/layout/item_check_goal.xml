@@ -10,5 +10,6 @@
     android:layoutDirection="rtl"
     android:paddingStart="@dimen/margin_home_30dp"
     android:paddingEnd="@dimen/margin_goal_15dp"
+    android:paddingVertical="@dimen/margin_goal_15dp"
     android:text="@string/Check_Edit_c"
     app:drawableStartCompat="@drawable/non_active_dot" />
