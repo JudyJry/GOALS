@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -108,11 +109,27 @@ class UserFriendFragment : Fragment() {
         override fun getItemCount(): Int = mList.count()
 
         class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            val name: TextView = itemView.findViewById(R.id.friend_yet_name)
-            val image :ImageView = itemView.findViewById(R.id.friend_yet_image)
+            private val name: TextView = itemView.findViewById(R.id.friend_yet_name)
+            private val image :ImageView = itemView.findViewById(R.id.friend_yet_image)
+            private val button : Button = itemView.findViewById(R.id.friend_yet_plus_button)
             fun bindData(n: String, i: Int) {
                 name.text = n
                 image.setImageResource(i)
+                button.setOnClickListener {
+                    if (!button.isSelected) {
+                        button.isSelected = true
+                        button.text = "好友"
+                        val user : String  = UserInfo.getUser()
+                        val num = UserInfo.users[user]!!["friendNum"] as Int
+                        UserInfo.users[user]!!["friendNum"] = num+1
+                    } else {
+                        val user : String  = UserInfo.getUser()
+                        val num = UserInfo.users[user]!!["friendNum"] as Int
+                        UserInfo.users[user]!!["friendNum"] = num-1
+                        button.isSelected = false
+                        button.text = "加好友"
+                    }
+                }
             }
         }
     }

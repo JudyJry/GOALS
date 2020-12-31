@@ -32,9 +32,7 @@ class SortListView(
         private val likeBtn : ImageButton = itemView.findViewById(R.id.sort_like)
         fun bindData(i: Int, p: Int){
             itemText.setText(i)
-            if (SortItem.like[p]){
-                likeBtn.setImageResource(R.drawable.ic_heart1)
-            }
+            likeBtn.isSelected = SortItem.like[p]
         }
     }
 }

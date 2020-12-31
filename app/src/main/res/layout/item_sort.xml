@@ -32,6 +32,6 @@
         android:layout_marginBottom="@dimen/margin_goal_10dp"
         android:contentDescription="@string/Sort_c"
         android:background="@color/white"
-        app:srcCompat="@drawable/ic_heart1" />
+        app:srcCompat="@drawable/selector_heart" />
 
 </RelativeLayout>

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/size_user_icon_80dp">
 
-    <ImageView
+    <com.example.test.CircleImageView
         android:id="@+id/friend_yet_image"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:contentDescription="@string/User_Friend_Yet_c"
-        android:src="@drawable/user_user_icon"
         android:layout_marginStart="20dp"
+        android:contentDescription="@string/User_Friend_Yet_c"
         android:scaleType="centerCrop"
+        android:src="@drawable/user_user_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,9 +21,9 @@
         style="@style/User_Friend_yet_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:gravity="center_vertical"
         android:text="@string/Main_User"
-        android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/friend_yet_image"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,11 +33,12 @@
         style="@style/Orange_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
         android:text="@string/User_Friend_plus_c"
+        android:backgroundTint="@color/selector_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="20dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/friend_yet_divider"

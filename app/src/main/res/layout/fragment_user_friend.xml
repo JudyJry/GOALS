@@ -56,7 +56,7 @@
 
                 <TableRow android:gravity="center">
 
-                    <ImageView
+                    <com.example.test.CircleImageView
                         android:id="@+id/friend_now_1"
                         android:layout_width="@dimen/size_user_icon_80dp"
                         android:layout_height="@dimen/size_user_icon_80dp"
@@ -64,9 +64,9 @@
                         android:contentDescription="@string/User_Friend_c"
                         android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
-                        android:visibility="invisible"/>
+                        android:visibility="invisible" />
 
-                    <ImageView
+                    <com.example.test.CircleImageView
                         android:id="@+id/friend_now_2"
                         android:layout_width="@dimen/size_user_icon_80dp"
                         android:layout_height="@dimen/size_user_icon_80dp"
@@ -74,9 +74,9 @@
                         android:contentDescription="@string/User_Friend_c"
                         android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
-                        android:visibility="invisible"/>
+                        android:visibility="invisible" />
 
-                    <ImageView
+                    <com.example.test.CircleImageView
                         android:id="@+id/friend_now_3"
                         android:layout_width="@dimen/size_user_icon_80dp"
                         android:layout_height="@dimen/size_user_icon_80dp"
@@ -84,13 +84,13 @@
                         android:contentDescription="@string/User_Friend_c"
                         android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
-                        android:visibility="invisible"/>
+                        android:visibility="invisible" />
 
                 </TableRow>
 
                 <TableRow android:gravity="center">
 
-                    <ImageView
+                    <com.example.test.CircleImageView
                         android:id="@+id/friend_now_4"
                         android:layout_width="@dimen/size_user_icon_80dp"
                         android:layout_height="@dimen/size_user_icon_80dp"
@@ -98,9 +98,9 @@
                         android:contentDescription="@string/User_Friend_c"
                         android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
 
-                    <ImageView
+                    <com.example.test.CircleImageView
                         android:id="@+id/friend_now_5"
                         android:layout_width="@dimen/size_user_icon_80dp"
                         android:layout_height="@dimen/size_user_icon_80dp"
@@ -108,9 +108,9 @@
                         android:contentDescription="@string/User_Friend_c"
                         android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
 
-                    <ImageView
+                    <com.example.test.CircleImageView
                         android:id="@+id/friend_now_6"
                         android:layout_width="@dimen/size_user_icon_80dp"
                         android:layout_height="@dimen/size_user_icon_80dp"
@@ -118,7 +118,7 @@
                         android:contentDescription="@string/User_Friend_c"
                         android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
                 </TableRow>
             </TableLayout>
         </RelativeLayout>
@@ -144,13 +144,13 @@
                 android:layout_height="1dp"
                 android:layout_below="@+id/friend_yet_title"
                 android:background="@color/deep_purple" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/friend_yet_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/friend_yet_divider"
-                tools:listitem="@layout/item_user_friend_yet"
-                />
+                tools:listitem="@layout/item_user_friend_yet" />
         </RelativeLayout>
     </RelativeLayout>
 

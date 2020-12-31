@@ -67,6 +67,10 @@ class UserFragment : Fragment() {
         tabViewAdapter = UserTabView(list)
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val friendText = "好友 ${UserInfo.users[UserInfo.getUser()]?.get("friendNum")}位"
+        friendButton.text = friendText
+    }
 
     private fun changeList(
         bool: MutableList<Boolean>,

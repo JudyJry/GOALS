@@ -24,12 +24,13 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
+            <com.example.test.CircleImageView
                 android:id="@+id/user_image"
                 android:layout_width="104dp"
                 android:layout_height="104dp"
                 android:layout_marginTop="12dp"
                 android:contentDescription="@string/Main_User"
+                android:background="@drawable/user_image_bg"
                 android:scaleType="centerCrop"
                 android:src="@drawable/user_user_icon" />
 
