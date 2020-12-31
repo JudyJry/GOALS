@@ -20,6 +20,7 @@ class UserFragment : Fragment() {
     private lateinit var itemAdapter: UserListView
     private lateinit var itemTextView: TextView
     private lateinit var itemListBg: LinearLayout
+    private lateinit var userImage: ImageView
     private lateinit var userNameText: TextView
     private lateinit var friendButton: Button
     override fun onCreateView(
@@ -38,6 +39,7 @@ class UserFragment : Fragment() {
         itemAdapter.items = changeList(GoalItem.created, GoalItem.item)
 
         userNameText.text = UserInfo.users[UserInfo.getUser()]?.get("name") as String
+        userImage.setImageResource(UserInfo.users[UserInfo.getUser()]?.get("image") as Int)
         val friendText = "好友 ${UserInfo.users[UserInfo.getUser()]?.get("friendNum")}位"
         friendButton.text = friendText
         friendButton.setOnClickListener(toFriendPage)
@@ -59,6 +61,7 @@ class UserFragment : Fragment() {
         itemListBg = root.findViewById(R.id.user_tab_item)
         friendButton = root.findViewById(R.id.user_friend_button)
         userNameText = root.findViewById(R.id.user_name)
+        userImage = root.findViewById(R.id.user_image)
 
         itemAdapter = UserListView(null)
         tabViewAdapter = UserTabView(list)

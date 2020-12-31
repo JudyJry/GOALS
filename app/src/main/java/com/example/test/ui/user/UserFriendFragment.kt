@@ -50,14 +50,14 @@ class UserFriendFragment : Fragment() {
             for (i in friendImage.indices) {
                 friendImage[i].apply {
                     visibility = View.VISIBLE
-                    imageResource = R.drawable.user_user_icon
+                    imageResource = UserInfo.friend[i]["image"] as Int
                 }
             }
         } else if (friendNum > 3) {
             for (i in IntRange(0, friendNum-1)) {
                 friendImage[i].apply {
                     visibility = View.VISIBLE
-                    imageResource = R.drawable.user_user_icon
+                    imageResource = UserInfo.friend[i]["image"] as Int
                 }
             }
             for (i in friendNum..5) {
@@ -67,7 +67,7 @@ class UserFriendFragment : Fragment() {
             for (i in IntRange(0, friendNum-1)) {
                 friendImage[i].apply {
                     visibility = View.VISIBLE
-                    imageResource = R.drawable.user_user_icon
+                    imageResource = UserInfo.friend[i]["image"] as Int
                 }
             }
             for (i in 3..5) {
@@ -80,7 +80,19 @@ class UserFriendFragment : Fragment() {
 
     class FriendYetListAdapter :
         RecyclerView.Adapter<FriendYetListAdapter.Holder>() {
-        private var mList: MutableList<Int> = arrayListOf(0,1,2,3,4)
+        private var mList: MutableList<String> =
+            arrayListOf(
+                "約翰卡斯",
+                "黑斯特",
+                "不理我",
+            )
+
+        private var iList: MutableList<Int> =
+            arrayListOf(
+                android.R.color.holo_red_light,
+                android.R.color.holo_blue_light,
+                android.R.color.holo_green_light,
+            )
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
             val itemView =
@@ -90,15 +102,17 @@ class UserFriendFragment : Fragment() {
         }
 
         override fun onBindViewHolder(holder: Holder, position: Int) {
-            holder.bindData(mList[position])
+            holder.bindData(mList[position],iList[position])
         }
 
         override fun getItemCount(): Int = mList.count()
 
         class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            val item: TextView = itemView.findViewById(R.id.friend_yet_image)
-            fun bindData(it: Int) {
-                item.text = it.toString()
+            val name: TextView = itemView.findViewById(R.id.friend_yet_name)
+            val image :ImageView = itemView.findViewById(R.id.friend_yet_image)
+            fun bindData(n: String, i: Int) {
+                name.text = n
+                image.setImageResource(i)
             }
         }
     }

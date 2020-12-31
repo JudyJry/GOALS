@@ -62,6 +62,7 @@
                         android:layout_height="@dimen/size_user_icon_80dp"
                         android:layout_margin="@dimen/margin_goal_10dp"
                         android:contentDescription="@string/User_Friend_c"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
                         android:visibility="invisible"/>
 
@@ -71,6 +72,7 @@
                         android:layout_height="@dimen/size_user_icon_80dp"
                         android:layout_margin="@dimen/margin_goal_10dp"
                         android:contentDescription="@string/User_Friend_c"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
                         android:visibility="invisible"/>
 
@@ -80,6 +82,7 @@
                         android:layout_height="@dimen/size_user_icon_80dp"
                         android:layout_margin="@dimen/margin_goal_10dp"
                         android:contentDescription="@string/User_Friend_c"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
                         android:visibility="invisible"/>
 
@@ -93,6 +96,7 @@
                         android:layout_height="@dimen/size_user_icon_80dp"
                         android:layout_margin="@dimen/margin_goal_10dp"
                         android:contentDescription="@string/User_Friend_c"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
                         android:visibility="gone"/>
 
@@ -102,6 +106,7 @@
                         android:layout_height="@dimen/size_user_icon_80dp"
                         android:layout_margin="@dimen/margin_goal_10dp"
                         android:contentDescription="@string/User_Friend_c"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
                         android:visibility="gone"/>
 
@@ -111,6 +116,7 @@
                         android:layout_height="@dimen/size_user_icon_80dp"
                         android:layout_margin="@dimen/margin_goal_10dp"
                         android:contentDescription="@string/User_Friend_c"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/user_user_icon"
                         android:visibility="gone"/>
                 </TableRow>
