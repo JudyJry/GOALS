@@ -30,6 +30,10 @@
     <string name="Home_Banner">banner</string>
     <string name="Home_Friend_c">好友動態</string>
     <string name="Home_Post_Image">圖片</string>
+    <string name="Home_Post_Content">今天我在大佳河濱公園和大家一起跑了
+10公里，大家都好努力的完成自己訂的
+目標，我很感動～</string>
+    <string name="Home_Post_Time">16:41</string>
     <!--check-->
     <string name="Check_Goal_c">參加目標</string>
     <string name="Check_Location_c">地點</string>

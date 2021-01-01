@@ -1,80 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
-    android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/home_title_act"
-        style="@style/Home_TextView"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Main_Title_1" />
+        android:orientation="vertical">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/home_banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/home_title_act"/>
+        <TextView
+            android:id="@+id/home_title_act"
+            style="@style/Home_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Main_Title_1" />
 
-    <TextView
-        android:id="@+id/home_title_goal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Main_Title_2"
-        android:textColor="@color/white"
-        style="@style/Home_TextView"
-        android:layout_below="@+id/home_banner"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/home_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_title_act" />
 
-    <TextView
-        android:id="@+id/home_goal_more"
-        style="@style/Home_TextView_More"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/home_title_goal"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="@dimen/margin_home_30dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/Post_More_c"
-        android:clickable="true"
-        android:focusable="true"/>
+        <TextView
+            android:id="@+id/home_title_goal"
+            style="@style/Home_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_banner"
+            android:text="@string/Main_Title_2"
+            android:textColor="@color/white" />
 
-    <include
-        android:id="@+id/home_goal_item"
-        layout="@layout/item_user"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginHorizontal="@dimen/margin_home_30dp"
-        android:layout_below="@+id/home_title_goal"/>
+        <TextView
+            android:id="@+id/home_goal_more"
+            style="@style/Home_TextView_More"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/home_title_goal"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_home_30dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/Post_More_c" />
 
-    <View
-        android:id="@+id/home_divider"
-        android:layout_below="@+id/home_goal_item"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/light_cyan"
-        android:layout_marginTop="@dimen/margin_goal_15dp"
-        android:layout_marginStart="@dimen/margin_home_30dp"
-        android:layout_marginEnd="@dimen/margin_home_30dp"/>
+        <include
+            android:id="@+id/home_goal_item"
+            layout="@layout/item_user"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/home_title_goal"
+            android:layout_marginHorizontal="@dimen/margin_home_30dp" />
 
-    <TextView
-        android:id="@+id/home_friend_post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Home_Friend_c"
-        android:textColor="@color/white"
-        style="@style/Home_TextView"
-        android:layout_below="@+id/home_divider"/>
+        <View
+            android:id="@+id/home_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/home_goal_item"
+            android:layout_marginStart="@dimen/margin_home_30dp"
+            android:layout_marginTop="@dimen/margin_goal_15dp"
+            android:layout_marginEnd="@dimen/margin_home_30dp"
+            android:background="@color/light_cyan" />
 
-    <include layout="@layout/item_home_post"
-        android:layout_below="@+id/home_friend_post"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"/>
+        <TextView
+            android:id="@+id/home_friend_post"
+            style="@style/Home_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_divider"
+            android:text="@string/Home_Friend_c"
+            android:textColor="@color/white" />
 
+        <include
+            layout="@layout/item_home_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_friend_post"
+            android:layout_marginHorizontal="20dp" />
 
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

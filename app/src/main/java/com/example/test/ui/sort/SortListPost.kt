@@ -47,18 +47,10 @@ class SortListPost(list: List<String>) : RecyclerView.Adapter<SortListPost.Holde
                 }
                 popupMenu.show()
             }
-            heart.setOnClickListener {
-                heart.isSelected = !heart.isSelected
-            }
-            heartText.setOnClickListener {
-                heart.isSelected = !heart.isSelected
-            }
-            save.setOnClickListener {
-                save.isSelected = !save.isSelected
-            }
-            saveText.setOnClickListener {
-                save.isSelected = !save.isSelected
-            }
+            heart.setOnClickListener { heart.isSelected = !heart.isSelected }
+            heartText.setOnClickListener { heart.isSelected = !heart.isSelected }
+            save.setOnClickListener { save.isSelected = !save.isSelected }
+            saveText.setOnClickListener { save.isSelected = !save.isSelected }
         }
     }
 }
