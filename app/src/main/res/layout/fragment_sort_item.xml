@@ -81,12 +81,13 @@
             android:id="@+id/sort_item_tri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/sort_item_post_num"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/margin_goal_10dp"
             android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp"
-            android:background="@drawable/ic_triangle"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_triangle"
+            android:scaleType="centerCrop"
+            android:layout_alignTop="@+id/sort_item_subtitle"
+            android:layout_alignBottom="@+id/sort_item_subtitle"
             android:contentDescription="@string/Post_More_c" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -151,6 +152,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/sort_item_tab"
             android:orientation="horizontal" />
+        <Space
+            android:layout_below="@+id/sort_item_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_goal_10dp"/>
 
     </RelativeLayout>
 </ScrollView>

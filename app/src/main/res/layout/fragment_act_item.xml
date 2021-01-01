@@ -44,12 +44,13 @@
         <TextView
             android:id="@+id/act_item_time"
             style="@style/Act_Item_Context"
-            android:layout_width="@dimen/width_act_item_context"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
             android:layout_marginTop="@dimen/margin_act_16dp"
+            android:layout_marginEnd="@dimen/margin_act_12dp"
             android:text="@string/Act_Item_Time_1"
-            app:layout_constraintStart_toEndOf="@id/act_item_time_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/act_item_location"
             app:layout_constraintTop_toBottomOf="@+id/act_item_title" />
 
         <TextView
@@ -66,11 +67,13 @@
         <TextView
             android:id="@+id/act_item_location"
             style="@style/Act_Item_Context"
-            android:layout_width="@dimen/width_act_item_context"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="@dimen/margin_act_12dp"
+            android:layout_marginEnd="@dimen/margin_act_12dp"
             android:layout_marginTop="@dimen/margin_act_16dp"
             android:text="@string/Act_Item_Location_1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/act_item_location_title"
             app:layout_constraintTop_toBottomOf="@+id/act_item_time" />
 
@@ -88,12 +91,13 @@
         <TextView
             android:id="@+id/act_item_cost"
             style="@style/Act_Item_Context"
-            android:layout_width="@dimen/width_act_item_context"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="@dimen/margin_act_12dp"
             android:layout_marginTop="@dimen/margin_act_16dp"
+            android:layout_marginEnd="@dimen/margin_act_12dp"
             android:text="@string/Act_Item_Cost_1"
-            android:maxWidth="280dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/act_item_cost_title"
             app:layout_constraintTop_toBottomOf="@+id/act_item_location" />
 
@@ -111,11 +115,13 @@
         <TextView
             android:id="@+id/act_item_count"
             style="@style/Act_Item_Context"
-            android:layout_width="@dimen/width_act_item_context"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="@dimen/margin_act_12dp"
+            android:layout_marginEnd="@dimen/margin_act_12dp"
             android:layout_marginTop="@dimen/margin_act_16dp"
             android:text="@string/Act_Item_Count_1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/act_item_count_title"
             app:layout_constraintTop_toBottomOf="@+id/act_item_cost" />
 

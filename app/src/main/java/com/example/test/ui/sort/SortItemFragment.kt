@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -20,18 +21,19 @@ import com.google.android.material.tabs.TabLayoutMediator
 class SortItemFragment(private var itemPos: Int) : Fragment() {
     private var shortAnimationDuration: Int = 0
     private lateinit var labelList: RecyclerView
+    private lateinit var tabLayout: TabLayout
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tri: ImageButton
+    private lateinit var sortTitle : TextView
+    private lateinit var sortSubtitle : TextView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val s = SortItem.s[itemPos]
         val root = inflater.inflate(R.layout.fragment_sort_item, container, false)
-        labelList = root.findViewById(R.id.sort_label_list)
-        val tabLayout: TabLayout = root.findViewById(R.id.sort_item_tab)
         val tabItem = arrayListOf(R.string.Sort_item_Hot_c, R.string.Sort_Item_New_c)
-        val viewPager: ViewPager2 = root.findViewById(R.id.sort_item_viewPager)
-        val tri: ImageButton = root.findViewById(R.id.sort_item_tri)
-
+        setVal(root)
         shortAnimationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
 
         labelList.layoutManager =
@@ -44,6 +46,8 @@ class SortItemFragment(private var itemPos: Int) : Fragment() {
             tab.setText(tabItem[position])
         }.attach()
 
+        sortTitle.setText(s["title"] as Int)
+        sortSubtitle.text = s["subtitle"] as String
 
         tri.setOnClickListener {
             if (labelList.layoutParams.height == 0) {
@@ -67,6 +71,15 @@ class SortItemFragment(private var itemPos: Int) : Fragment() {
             }
         }
         return root
+    }
+
+    private fun setVal(root: View) {
+        labelList = root.findViewById(R.id.sort_label_list)
+        tabLayout = root.findViewById(R.id.sort_item_tab)
+        viewPager = root.findViewById(R.id.sort_item_viewPager)
+        tri = root.findViewById(R.id.sort_item_tri)
+        sortTitle = root.findViewById(R.id.sort_item_title)
+        sortSubtitle = root.findViewById(R.id.sort_item_subtitle)
     }
 
     private fun listShow(view: View, nh: Int) {

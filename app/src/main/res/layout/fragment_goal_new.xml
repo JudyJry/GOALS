@@ -99,13 +99,13 @@
         android:id="@+id/goal_new_context"
         style="@style/Goal_New_EditText.2"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
         android:layout_margin="@dimen/margin_goal_10dp"
         android:autofillHints="@string/Goal_new_context_c"
         android:gravity="start|top"
         android:hint="@string/Goal_new_context_c"
         android:inputType="textMultiLine"
-        android:maxHeight="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/goal_img_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goal_new_max_member" />
@@ -117,8 +117,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_goal_10dp"
         android:text="@string/Goal_new_img_c"
+        app:layout_constraintBottom_toTopOf="@+id/goal_new_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goal_new_context" />
+         />
 
     <TextView
         android:id="@+id/goal_new_img_text"
@@ -136,11 +137,11 @@
         style="@style/Orange_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_goal_10dp"
         android:layout_marginTop="@dimen/margin_goal_10dp"
         android:layout_marginEnd="@dimen/margin_goal_10dp"
+        android:layout_marginBottom="@dimen/margin_goal_10dp"
         android:text="@string/Goal_new_item_c"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goal_img_button" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

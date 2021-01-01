@@ -10,6 +10,7 @@
     <dimen name="margin_goal_10dp">10dp</dimen>
     <dimen name="margin_goal_new_button">25dp</dimen>
     <dimen name="margin_act_16dp">16dp</dimen>
+    <dimen name="margin_act_12dp">12dp</dimen>
     <dimen name="margin_user_tab_height">-36dp</dimen>
     <dimen name="margin_sort_list">20dp</dimen>
     <dimen name="margin_post_9dp">9dp</dimen>
