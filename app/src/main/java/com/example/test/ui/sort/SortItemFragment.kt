@@ -14,12 +14,14 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.test.R
 import com.example.test.SortItem
+import com.example.test.toPx
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 
 class SortItemFragment(private var itemPos: Int) : Fragment() {
     private var shortAnimationDuration: Int = 0
+    private val labelHeight = 26.toPx
     private lateinit var labelList: RecyclerView
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
@@ -58,8 +60,8 @@ class SortItemFragment(private var itemPos: Int) : Fragment() {
                         .setDuration(shortAnimationDuration.toLong())
                         .setListener(null)
                 }
-                listShow(labelList, 85)
-            } else if (labelList.layoutParams.height == 85) {
+                listShow(labelList, labelHeight)
+            } else if (labelList.layoutParams.height == labelHeight) {
                 tri.apply {
                     rotation = 180f
                     animate()

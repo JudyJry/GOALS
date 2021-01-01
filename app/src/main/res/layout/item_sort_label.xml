@@ -7,5 +7,5 @@
     style="@style/Sort_Item_Label"
     android:background="@drawable/shape_white_button"
     android:text="@string/Sort_Ball_c"
-    android:layout_marginStart="@dimen/margin_goal_10dp"
-    android:layout_marginEnd="@dimen/margin_goal_10dp"/>
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"/>
