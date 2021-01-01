@@ -59,7 +59,7 @@
         android:layout_below="@+id/home_post_user_icon"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="@dimen/margin_goal_10dp"
+        android:layout_margin="@dimen/margin_goal_15dp"
         android:text="@string/Home_Post_Content" />
 
 
@@ -79,7 +79,7 @@
         android:layout_height="@dimen/size_post_icon"
         android:layout_below="@+id/home_post_image"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="@dimen/margin_post_9dp"
+        android:layout_marginStart="@dimen/margin_goal_10dp"
         android:layout_marginTop="@dimen/margin_post_9dp"
         android:background="@color/white"
         android:contentDescription="@string/Post_Heart_c"

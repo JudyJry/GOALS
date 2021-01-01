@@ -48,6 +48,7 @@ class CheckInFragment : Fragment() {
         goalList.addOnItemTouchListener(goalItemSelect(root.context))
         locateList.addOnItemTouchListener(locateItemSelect(root.context))
         checkButton.setOnClickListener {
+            Toast.makeText(root.context,"打卡成功",Toast.LENGTH_SHORT).show()
             activity?.onBackPressed()
         }
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
