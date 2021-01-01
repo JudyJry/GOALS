@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <ImageView
         android:id="@+id/post_user_icon"
         android:layout_width="wrap_content"
@@ -22,9 +23,9 @@
         android:layout_alignBottom="@+id/post_user_name"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/margin_post_9dp"
+        android:background="@color/white"
         android:contentDescription="@string/Post_More_c"
-        android:src="@drawable/ic_more_horizontal"
-        android:background="@color/white"/>
+        android:src="@drawable/ic_more_horizontal" />
 
     <TextView
         android:id="@+id/post_user_name"
@@ -32,12 +33,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/post_user_icon"
-        android:layout_alignBottom="@+id/post_user_icon"
         android:layout_alignEnd="@+id/post_more"
+        android:layout_alignBottom="@+id/post_user_icon"
         android:layout_marginStart="@dimen/margin_post_9dp"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
         android:layout_marginEnd="@dimen/size_icon"
+        android:layout_marginBottom="0dp"
         android:layout_toEndOf="@+id/post_user_icon"
         android:gravity="center_vertical"
         android:text="@string/Goal_Item_author_c" />
@@ -51,6 +52,9 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="@dimen/margin_post_9dp"
         android:layout_marginTop="@dimen/margin_post_9dp"
+        android:layout_marginEnd="@dimen/margin_post_9dp"
+        android:layout_toStartOf="@+id/post_more"
+        android:maxLines="1"
         android:text="@string/Act_Item_Title_1" />
 
     <TextView
@@ -62,92 +66,104 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="@dimen/margin_post_9dp"
-        android:layout_marginEnd="@dimen/margin_post_9dp"
         android:layout_marginTop="@dimen/margin_post_9dp"
-        android:text="@string/Act_Item_Time_1"
+        android:layout_marginEnd="@dimen/margin_post_9dp"
+        android:maxLength="30"
         android:maxLines="1"
-        android:maxLength="30"/>
+        android:text="@string/Act_Item_Time_1" />
+
     <ImageButton
         android:id="@+id/post_heart"
         android:layout_width="@dimen/size_post_icon"
         android:layout_height="@dimen/size_post_icon"
-        android:src="@drawable/ic_favorite_border_black_24dp"
-        android:tint="@color/deep_orange"
-        android:background="@color/white"
         android:layout_below="@+id/post_context"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="@dimen/margin_post_9dp"
         android:layout_marginStart="@dimen/margin_post_9dp"
-        android:contentDescription="@string/Post_Heart_c" />
+        android:layout_marginTop="@dimen/margin_post_9dp"
+        android:background="@color/white"
+        android:contentDescription="@string/Post_Heart_c"
+        android:src="@drawable/selector_heart"
+        android:tint="@color/deep_orange" />
+
     <TextView
         android:id="@+id/post_heart_text"
         style="@style/Goal_Context"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/post_context"
-        android:layout_marginStart="@dimen/margin_post_5dp"
-        android:layout_toEndOf="@id/post_heart"
         android:layout_alignTop="@+id/post_heart"
         android:layout_alignBottom="@+id/post_heart"
+        android:layout_marginStart="@dimen/margin_post_5dp"
+        android:layout_toEndOf="@id/post_heart"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center"
         android:text="@string/Post_Heart_c" />
+
     <ImageButton
         android:id="@+id/post_reply"
         android:layout_width="@dimen/size_post_icon"
         android:layout_height="@dimen/size_post_icon"
-        android:src="@drawable/ic_chat_bubble_outline_black_24dp"
-        android:tint="@color/deep_orange"
-        android:background="@color/white"
         android:layout_below="@+id/post_context"
-        android:layout_toEndOf="@+id/post_heart_text"
-        android:layout_marginTop="@dimen/margin_post_9dp"
         android:layout_marginStart="@dimen/margin_post_9dp"
-        android:contentDescription="@string/Post_Heart_c" />
+        android:layout_marginTop="@dimen/margin_post_9dp"
+        android:layout_toEndOf="@+id/post_heart_text"
+        android:background="@color/white"
+        android:contentDescription="@string/Post_Heart_c"
+        android:src="@drawable/ic_chat_bubble_outline_black_24dp"
+        android:tint="@color/deep_orange" />
+
     <TextView
         android:id="@+id/post_reply_text"
         style="@style/Goal_Context"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/post_context"
+        android:layout_alignTop="@+id/post_reply"
+        android:layout_alignBottom="@id/post_reply"
         android:layout_marginStart="@dimen/margin_post_5dp"
         android:layout_toEndOf="@id/post_reply"
-        android:layout_alignBottom="@id/post_reply"
-        android:layout_alignTop="@+id/post_reply"
 
         android:gravity="center"
         android:text="@string/Post_Reply_c" />
+
     <ImageButton
         android:id="@+id/post_save"
         android:layout_width="@dimen/size_post_icon"
         android:layout_height="@dimen/size_post_icon"
-        android:src="@drawable/ic_save"
-        android:background="@color/white"
         android:layout_below="@+id/post_context"
-        android:layout_toEndOf="@+id/post_reply_text"
-        android:layout_marginTop="@dimen/margin_post_9dp"
         android:layout_marginStart="@dimen/margin_post_9dp"
-        android:contentDescription="@string/Post_Heart_c" />
+        android:layout_marginTop="@dimen/margin_post_9dp"
+        android:layout_toEndOf="@+id/post_reply_text"
+        android:background="@color/white"
+        android:contentDescription="@string/Post_Heart_c"
+        android:src="@drawable/selector_save" />
+
     <TextView
         android:id="@+id/post_save_text"
         style="@style/Goal_Context"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/post_context"
-        android:layout_marginStart="@dimen/margin_post_5dp"
-        android:layout_toEndOf="@id/post_save"
         android:layout_alignTop="@+id/post_save"
         android:layout_alignBottom="@+id/post_save"
+        android:layout_marginStart="@dimen/margin_post_5dp"
+        android:layout_toEndOf="@id/post_save"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center"
         android:text="@string/Post_Save_c" />
+
     <Space
         android:id="@+id/post_space"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_post_9dp"
-        android:layout_below="@id/post_heart"/>
+        android:layout_below="@id/post_heart" />
+
     <View
         android:id="@+id/post_divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/deep_purple"
-        android:layout_below="@+id/post_space"/>
+        android:layout_below="@+id/post_space"
+        android:background="@color/deep_purple" />
 </RelativeLayout>

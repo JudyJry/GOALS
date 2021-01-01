@@ -29,6 +29,7 @@
     <!--home-->
     <string name="Home_Banner">banner</string>
     <string name="Home_Friend_c">好友動態</string>
+    <string name="Home_Post_Image">圖片</string>
     <!--check-->
     <string name="Check_Goal_c">參加目標</string>
     <string name="Check_Location_c">地點</string>
@@ -99,6 +100,7 @@
     <string name="Post_Heart_c">喜歡</string>
     <string name="Post_Reply_c">回應</string>
     <string name="Post_Save_c">收藏</string>
+    <string name="Post_Report_c">檢舉</string>
     <!--other-->
     <string name="content">Content</string>
     <!--setting-->
